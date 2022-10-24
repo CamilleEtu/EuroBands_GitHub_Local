@@ -7,8 +7,17 @@
     <title>EuroBands</title>
 </head>
 <body>
+    <header>
+        <?php
+        include 'header.php';
+        ?>
+    </header>
+
+
+    <footer>
     <?php
-    include 'header.php';
-    ?>
+        include 'footer.php';
+        ?>
+    </footer>
 </body>
 </html>
