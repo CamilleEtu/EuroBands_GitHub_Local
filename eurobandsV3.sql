@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 24 oct. 2022 à 11:00
+-- Généré le : lun. 24 oct. 2022 à 11:06
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 8.1.2
 
@@ -100,6 +100,24 @@ CREATE TABLE `lien_artiste/style` (
   `id_artiste` int(11) NOT NULL,
   `id_style` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `lien_artiste/style`
+--
+
+INSERT INTO `lien_artiste/style` (`id_artiste`, `id_style`) VALUES
+(1, 2),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 2),
+(6, 3),
+(7, 4),
+(8, 2),
+(9, 3),
+(10, 3),
+(11, 4),
+(12, 4);
 
 -- --------------------------------------------------------
 
