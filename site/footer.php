@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta type="keywords" content="eurobands, festival, music, international">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/stylefooter.css"/>
     </head>
 
     <body>
