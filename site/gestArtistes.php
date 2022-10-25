@@ -31,9 +31,9 @@
                 <form method="POST" action="gestArtistes.php?ajout=1&choix=1">
                     Nom : <input type="text" name="nom" required></br>
                     Prénom (s'il existe) : <input type="text" name="prenom"></br>
-                    Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01"></br>
-                    Description de l'artiste : <textarea name="bio" required></br>
-                    Nation : <input type="text" name="nation"></br>
+                    Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01" required></br>
+                    Description de l'artiste : <textarea name="bio" required rows="8" cols="33" required>Il s'agit d'un artiste de ...</textarea></br>
+                    Nation : <input type="text" name="nation" required></br>
                     URL d'une vidéo de l'artiste : <input type="text" name="video"></br>
                     IMG de l'artiste : <input type="text" name="img"></br>
 
@@ -57,29 +57,34 @@
                     default:
                         break;
                 }
+
                 //permet d'afficher un message de confirmation d'ajout, de modification ou de suppression en fonction du choix de l'utilisateur et de lancer sa fonction associée pour le Gestionnaire
                 if (isset($_GET["ajout"])) {
-                    include("configuration.php");
-                    require_once("Artiste.php");
-                    require_once("Gestionnaire.php");
+                    require_once("classes/Artiste.php");
+                    require_once("classes/Gestionnaire.php");
                     session_start();
                     //permet de se connecter à la base de donnée et de récupérer tous les héros du meilleur au moins bon (en fonction du classement)
-                    $bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
                     $instance = Gestionnaire::getInstance();
                     switch ($_GET["ajout"]) {
                         case 1:
-                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$_POST["video"], $_POST["img"]);
-                            $instance->ajouterArtiste($bdd,$newArtiste);
-                            echo "<h1>Le héro a bien été ajouté !</h1>";
+                            if ($_POST["img"] == "") {
+                                $img = "https://www.pngitem.com/pimgs/m/52-526033_unknown-person-icon-png-transparent-png.png";
+                            }
+                            else{
+                                $img = $_POST["img"];
+                            }
+                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$video, $img);
+                            $instance->ajouterArtiste($newArtiste);
+                            echo "<h1>L'artiste a bien été ajouté !</h1>";
                             break;
 
                         case 2:
-                            modifHero($bdd,$_GET["idHero"],$_POST["prenom"],$_POST["nom"],$_POST["puissance"],$_POST["url"],$_POST["classe"],$_POST["citation"],$tabIdQuete);
-                            echo "<h1>Le héro a bien été modifié !</h1>";
+                          //  modifHero($bdd,$_GET["idHero"],$_POST["prenom"],$_POST["nom"],$_POST["puissance"],$_POST["url"],$_POST["classe"],$_POST["citation"],$tabIdQuete);
+                            echo "<h1>L'artiste a bien été modifié !</h1>";
                             break;
                         case 3:
-                            suppHero($bdd,$_POST["hero"]);
-                            echo "<h1>Le héro a bien été supprimé !</h1>";
+                          //  suppHero($bdd,$_POST["hero"]);
+                            echo "<h1>L'artiste a bien été supprimé !</h1>";
                     }
                 }
             }
