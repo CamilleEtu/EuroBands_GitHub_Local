@@ -11,7 +11,7 @@
     <body>
         <header>
             <div class="container_header">
-                <a href=""><img class="logo" src="img/logo_b.png"></a>
+                <a href=""><img class="logo" src="img/logo_small.png"></a>
                 <nav class="navbar">
                     <ul>
                         <li><a href="">Artiste</a></li>
@@ -23,7 +23,7 @@
         </header>
 
             <div class="container_p1">
-                <h1 class="titre_accueil">BIENVENUE A L'EUROBANDS</h1>
+                <h1 class="titre_accueil">BIENVENUE A EUROBANDS</h1>
                 <div>
                     <img src="./img/Angele.png">
                     <div>
@@ -109,7 +109,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <a href=""><li><img class="logo" src="img/logo_b.png"></li></a>
+                        <a href=""><li><img class="logo" src="img/logo_small.png"></li></a>
                         <li><h3>Plan du site</h3>
                             <ul>
                                 <a href=""><li>A propos de EuroBands</li></a>
