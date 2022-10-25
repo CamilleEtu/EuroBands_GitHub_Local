@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container_header">
-        <a href="./index.php"><img class="logo" src="img/logo_small.png"></a>
+        <a href="./index.php"><img class="logo1" src="img/logo_full.png"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="#artistes">Artiste</a></li>

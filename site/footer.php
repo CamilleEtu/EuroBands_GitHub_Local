@@ -17,7 +17,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <a href=""><li><img class="logo" src="img/logo_small.png"></li></a>
+                        <a href=""><li><img class="logo2" src="img/logo_small.png"></li></a>
                         <li><h3>Plan du site</h3>
                             <ul>
                                 <a href=""><li>A propos de EuroBands</li></a>
