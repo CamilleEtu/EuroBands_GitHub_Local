@@ -59,7 +59,6 @@ class Gestionnaire {
 			array_push($this->artistes, $artiste);
 		}
 		$requete="INSERT INTO artiste (nom_artiste,prenom_artiste,date_crea,bio_artiste,nation_artiste,url_video_artiste,url_image_artiste) VALUES ('".$artiste->nom."','".$artiste->prenom."','".$artiste->dateDebut."','".$artiste->bio."','".$artiste->nation."','".$artiste->urlVideo."','".$artiste->urlImg."')";
-		var_dump($requete);
 		$results = $this->bdd->query($requete);
 		$tabInsert = $results->fetchAll();
 		$results->closeCursor();
