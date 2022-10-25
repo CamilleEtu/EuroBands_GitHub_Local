@@ -11,7 +11,9 @@ class Artiste{
 
     public function __construct($n, $p, $d, $b, $na, $vid, $img){
         $this->nom = $n;
-        isset($p){$this->prenom = $p};
+        if(isset($p)){
+            $this->prenom = $p;
+        };
         $this->dateDebut = $d;
         $this->bio = $b;
         $this->nation = $na;
@@ -27,8 +29,8 @@ class Artiste{
         echo "Date de début de carrière : ". $this->dateDebut." <br/>";
         echo "Description : ". $this->bio." <br/>";
         echo "Nation : ". $this->nation." <br/>";
-        echo " <iframe width="50"% height="50"% src=\"".$this->urlVideo."\"></iframe>"
-        echo "<img src=\"".$this->urlImg."\" alt=\"Photo de ".$this->prenom."\">"
+        echo " <iframe width=\"50\"% height=\"50\"% src=\"".$this->urlVideo."\"></iframe>";
+        echo "<img src=\"".$this->urlImg."\" alt=\"Photo de ".$this->prenom."\">";
     }
 }
 
