@@ -44,6 +44,6 @@
     color: inherit;
 }
 
-.container_reserv {
-    
+.container_reserv > div > div > h2{
+    font-size: 20px;
 }
