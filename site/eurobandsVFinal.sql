@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 25 oct. 2022 à 17:01
+-- Généré le : mar. 25 oct. 2022 à 17:54
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 8.1.2
 
@@ -93,19 +93,19 @@ INSERT INTO `jour` (`id_jour`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `lien_artiste/style`
+-- Structure de la table `lien_artiste_style`
 --
 
-CREATE TABLE `lien_artiste/style` (
+CREATE TABLE `lien_artiste_style` (
   `id_artiste` int(11) NOT NULL,
   `id_style` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `lien_artiste/style`
+-- Déchargement des données de la table `lien_artiste_style`
 --
 
-INSERT INTO `lien_artiste/style` (`id_artiste`, `id_style`) VALUES
+INSERT INTO `lien_artiste_style` (`id_artiste`, `id_style`) VALUES
 (1, 2),
 (2, 1),
 (3, 1),
@@ -122,19 +122,19 @@ INSERT INTO `lien_artiste/style` (`id_artiste`, `id_style`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `lien_jour/artiste`
+-- Structure de la table `lien_jour_artiste`
 --
 
-CREATE TABLE `lien_jour/artiste` (
+CREATE TABLE `lien_jour_artiste` (
   `id_jour` int(11) NOT NULL,
   `id_artiste` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `lien_jour/artiste`
+-- Déchargement des données de la table `lien_jour_artiste`
 --
 
-INSERT INTO `lien_jour/artiste` (`id_jour`, `id_artiste`) VALUES
+INSERT INTO `lien_jour_artiste` (`id_jour`, `id_artiste`) VALUES
 (4, 1),
 (4, 5),
 (4, 8),
@@ -204,16 +204,16 @@ ALTER TABLE `jour`
   ADD PRIMARY KEY (`id_jour`);
 
 --
--- Index pour la table `lien_artiste/style`
+-- Index pour la table `lien_artiste_style`
 --
-ALTER TABLE `lien_artiste/style`
+ALTER TABLE `lien_artiste_style`
   ADD KEY `id_artiste` (`id_artiste`),
   ADD KEY `id_style` (`id_style`);
 
 --
--- Index pour la table `lien_jour/artiste`
+-- Index pour la table `lien_jour_artiste`
 --
-ALTER TABLE `lien_jour/artiste`
+ALTER TABLE `lien_jour_artiste`
   ADD KEY `id_jour` (`id_jour`),
   ADD KEY `id_artiste` (`id_artiste`);
 
@@ -263,18 +263,18 @@ ALTER TABLE `style`
 --
 
 --
--- Contraintes pour la table `lien_artiste/style`
+-- Contraintes pour la table `lien_artiste_style`
 --
-ALTER TABLE `lien_artiste/style`
-  ADD CONSTRAINT `lien_artiste/style_ibfk_1` FOREIGN KEY (`id_style`) REFERENCES `style` (`id_style`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `lien_artiste/style_ibfk_2` FOREIGN KEY (`id_artiste`) REFERENCES `artiste` (`id_artiste`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `lien_artiste_style`
+  ADD CONSTRAINT `lien_artiste_style_ibfk_1` FOREIGN KEY (`id_artiste`) REFERENCES `artiste` (`id_artiste`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `lien_artiste_style_ibfk_2` FOREIGN KEY (`id_style`) REFERENCES `style` (`id_style`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `lien_jour/artiste`
+-- Contraintes pour la table `lien_jour_artiste`
 --
-ALTER TABLE `lien_jour/artiste`
-  ADD CONSTRAINT `lien_jour/artiste_ibfk_1` FOREIGN KEY (`id_jour`) REFERENCES `jour` (`id_jour`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `lien_jour/artiste_ibfk_2` FOREIGN KEY (`id_artiste`) REFERENCES `artiste` (`id_artiste`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `lien_jour_artiste`
+  ADD CONSTRAINT `lien_jour_artiste_ibfk_1` FOREIGN KEY (`id_artiste`) REFERENCES `artiste` (`id_artiste`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `lien_jour_artiste_ibfk_2` FOREIGN KEY (`id_jour`) REFERENCES `jour` (`id_jour`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `reserve`
