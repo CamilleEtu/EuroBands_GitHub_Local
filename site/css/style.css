@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container_header {
@@ -18,6 +18,7 @@
     text-decoration: none;
     list-style: none;
     padding: 5px 30px;
+    color: white;
 }
 
 .container_header > .resa:hover {
@@ -43,12 +44,6 @@
     border: solid 2px white;
     border-radius: 10px;
 }
-
-
-main {
-    color: black;
-}
-
 
 
 h3 {
@@ -99,4 +94,49 @@ nav > ul {
 
 .container_footer p {
     padding: 15px 0px;
+}
+
+.container_p1 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+.titre_accueil {
+    display: flex;
+    justify-content: center;
+    margin : 15px;
+}
+
+.container_p1 > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: row;
+}
+
+.container_p1 > div > img {
+    height: 300px;
+    width: auto;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.container_p1 > div > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_p1 > div > div > p {
+    margin-bottom: 35px;
+}
+
+.container_p1 > div > div > a {
+    text-decoration: none;
+    background-color: rgb(213, 213, 213);
+    padding: 10px;
+    border-radius: 10px;
+    color: inherit;
 }

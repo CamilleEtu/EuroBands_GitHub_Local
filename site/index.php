@@ -22,16 +22,16 @@
             </div>
         </header>
 
-        <main>
             <div class="container_p1">
-                <h1>TITRE EXPLICATION DU FESTIVAL</h1>
+                <h1 class="titre_accueil">TITRE EXPLICATION DU FESTIVAL</h1>
                 <div>
-                    <img src="/img/spaghettis.jpg" alt="Image d'illustration">
-                    <p>uiatgzyhtzr^hgiytgrbrzrthzrthzjyjyzjyjrzhhjkejfjgizhekflojhofoejheidieudjfuidehfiufiupzfzhiuhgriuahzrygueihtuhtehrrzijghruzhgurphgghzihrgugzhrgpiuhz</p>
-                    <a href="COUCOU">Voir plus</a>
+                    <img src="./img/spaghettis.jpg">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat ligula eu commodo consequat. Proin convallis accumsan libero, vitae sagittis ligula dictum pellentesque. Nam at lorem nec odio consectetur cursus. Proin eu pharetra ipsum, bibendum dapibus urna. Proin tempus massa bibendum mauris consectetur, eu viverra nibh pellentesque.</p>
+                        <a href="#">Voir plus</a>
+                    </div>
                 </div>
             </div>
-        </main>
 
 
         <footer>
