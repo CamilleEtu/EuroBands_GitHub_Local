@@ -23,23 +23,24 @@ class Festivalier{
         switch (count($tabJour)) {
             case 1:
                 //réservation pour une journée
-                # code...
+                $tarif = 30;
                 break;
             case 2:
                 //réservation pour 2 journées
-                # code...
+                $tarif = 55;
                 break;
             case 3:
                 //réservation pour 3 journées
-                # code...
+                $tarif = 80;
                 break;
             case 4:
                 //réservation pour tous les jours
-                # code...
+                $tarif = 105;
                 break;
                 
             default:
                 //il y a une erreur avec la table de jours
+                $tarif = NULL;
                 break;
         }
     }

@@ -81,7 +81,8 @@ class Gestionnaire {
             for ($i=0; $i < count($this->artistes); $i++) { 
                 if ($this->artistes[$i]["id_artiste"] == $artiste["id_artiste"]) {   
                     unset($this->artistes[$i]);
-            }
+            	}
+			}
 		}
 	}
 
