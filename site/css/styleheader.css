@@ -1,4 +1,15 @@
+<<<<<<< Updated upstream
 * {
+=======
+.navbar {
+    background: rgb(194, 194, 194);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar > ul{
+    width: 100%;
+>>>>>>> Stashed changes
     margin: 0;
     padding: 0;
     color: white;

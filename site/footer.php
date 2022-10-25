@@ -13,14 +13,14 @@
         <footer>
             <div class="container">
                 <div class="RS">
-                    <a href=""><img src="images/facebook.png"></a>
-                    <a href=""><img src="images/insta.png"></a>
-                    <a href=""><img src="images/twitter.png"></a>
-                    <a href=""><img src="images/youtube.png"></a>
+                    <a href=""><img src="img/facebook.png"></a>
+                    <a href=""><img src="img/insta.png"></a>
+                    <a href=""><img src="img/twitter.png"></a>
+                    <a href=""><img src="img/youtube.png"></a>
                 </div>
                 <nav>
                     <ul>
-                        <a href=""><li><img class="logo" src="images/logo_b.png"></li></a>
+                        <a href=""><li><img class="logo" src="img/logo_b.png"></li></a>
                         <li><h3>Plan du site</h3>
                             <ul>
                                 <a href=""><li>A propos de EuroBands</li></a>
