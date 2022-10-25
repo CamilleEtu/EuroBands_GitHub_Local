@@ -18,7 +18,7 @@
                         <li><a href="">En savoir plus</a></li>
                     </ul>
                 </nav>
-                <a href="">Réservation</a>
+                <a class="resa" href="">Réservation</a>
             </div>
         </header>
     </body>
