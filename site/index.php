@@ -10,16 +10,9 @@
 
     <body>
         <header>
-            <div class="container_header">
-                <a href=""><img class="logo" src="img/logo_small.png"></a>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="">Artiste</a></li>
-                        <li><a href="">En savoir plus</a></li>
-                    </ul>
-                </nav>
-                <a class="resa" href="">Réservation</a>
-            </div>
+            <?php
+            include './header.php';
+            ?>
         </header>
 
             <div class="container_p1">
@@ -100,38 +93,9 @@
 
 
         <footer>
-            <div class="container_footer">
-                <div class="RS">
-                    <a href=""><img src="img/facebook.png"></a>
-                    <a href=""><img src="img/insta.png"></a>
-                    <a href=""><img src="img/twitter.png"></a>
-                    <a href=""><img src="img/youtube.png"></a>
-                </div>
-                <nav>
-                    <ul>
-                        <a href=""><li><img class="logo" src="img/logo_small.png"></li></a>
-                        <li><h3>Plan du site</h3>
-                            <ul>
-                                <a href=""><li>A propos de EuroBands</li></a>
-                                <a href=""><li>Réservation</li></a>
-                            </ul>
-                        </li>
-                        <li><h3>Partie légale</h3>
-                            <ul>
-                                <a href=""><li>Mentions légales</li></a>
-                                <a href=""><li>CGV</li></a>
-                            </ul>
-                        </li>
-                        <li><h3>Coordonnées</h3>
-                            <p>&emsp;Place du Breuil</p>
-                            <p>&emsp;43 000 Le Puy En Velay</p>
-                            <p>&emsp;eurobands@mail.com</p>
-                            <p>&emsp;01 02 03 04 05</p>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            
+            <?php
+            include './footer.php';
+            ?>
         </footer>
     </body>
 </html>

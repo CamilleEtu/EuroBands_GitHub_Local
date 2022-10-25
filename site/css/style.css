@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Redwing";
-    src: url("../font/Redwing-Medium.otf");
+    src: local("../font/Redwing-Medium.otf");
 }
 
 * {
@@ -10,7 +10,7 @@
 }
 
 .container_header {
-    background-color: black;
+    background-color: rgb(30, 30, 30);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,12 +22,21 @@
     list-style: none;
     padding: 5px 30px;
     color: white;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.container_header > .resa {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 76, 76);
+    border-radius: 10px;
 }
 
 .container_header > .resa:hover {
-    color: black;
-    background-color: white;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
+    transition: .3s;
 }
 
 .container_header nav > ul > li > a:hover {
@@ -39,7 +48,7 @@
 
 
 .logo {
-    width: 80px;
+    width: 45px;
     height: auto;
 }
 
@@ -105,7 +114,7 @@ nav > ul {
     display: flex;
     justify-content: center;
     margin : 15px;
-    font-family: 'Redwin', sans-serif;
+    font-family: 'Redwing', sans-serif;
 }
 
 .container_p1 > div {
