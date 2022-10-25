@@ -1,4 +1,5 @@
 <?php
+
 require_once 'Artiste.php';
 require_once 'Festivalier.php';
 
@@ -7,19 +8,22 @@ Classe de la base de Gestionnaire (singleton)
 */
 class Gestionnaire {
 
+	public $bdd;
 	public $artistes = array();
     public $festivaliers = array();
 	static private $instance = NULL;
 
 	/** Constructeur */
 	private function __construct() {
+		require_once 'configuration.php';
+		$this->bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
         $requete='SELECT * FROM artiste';
-        $results = $bdd->query($requete);
+        $results = $this->bdd->query($requete);
         $this->artistes = $results->fetchAll();
         $results->closeCursor();
 
         $requete='SELECT * FROM festivalier';
-        $results = $bdd->query($requete);
+        $results = $this->bdd->query($requete);
         $this->festivaliers = $results->fetchAll();
         $results->closeCursor();
 	}
@@ -49,12 +53,14 @@ class Gestionnaire {
 	}
 
 	/** Ajout un nouvel artiste */
-	public function ajouterArtiste($bdd,$artiste) {
+	public function ajouterArtiste($artiste) {
+		
 		if ($artiste instanceof Artiste) {
 			array_push($this->artistes, $artiste);
 		}
-		$requete="INSERT INTO artiste (nom_artiste,prenom_artiste,date_crea,bio_artiste,nation_artiste,url_video_artiste,url_image_artiste) VALUES ('".$artiste["nom"]."','".$artiste["prenom"]."','".$artiste["dateDebut"]."','".$artiste["bio"]."','".$artiste["nation"]."','".$artiste["urlVideo"]."','".$artiste["urlImg"].")";
-		$results = $bdd->query($requete);
+		$requete="INSERT INTO artiste (nom_artiste,prenom_artiste,date_crea,bio_artiste,nation_artiste,url_video_artiste,url_image_artiste) VALUES ('".$artiste->nom."','".$artiste->prenom."','".$artiste->dateDebut."','".$artiste->bio."','".$artiste->nation."','".$artiste->urlVideo."','".$artiste->urlImg."')";
+		var_dump($requete);
+		$results = $this->bdd->query($requete);
 		$tabInsert = $results->fetchAll();
 		$results->closeCursor();
 
