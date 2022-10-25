@@ -144,4 +144,10 @@ nav > ul {
     padding: 10px;
     border-radius: 10px;
     color: inherit;
+    transition: .3s;
 }
+
+.container_p1 > div > div > a:hover {
+    background-color: rgb(179, 179, 179);
+}
+
