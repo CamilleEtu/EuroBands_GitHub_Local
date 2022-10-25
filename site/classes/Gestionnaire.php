@@ -1,5 +1,5 @@
 <?php
-
+require_once 'Style.php';
 require_once 'Artiste.php';
 require_once 'Festivalier.php';
 
@@ -10,6 +10,7 @@ class Gestionnaire {
 
 	public $bdd;
 	public $artistes = array();
+	public $styles = array();
     public $festivaliers = array();
 	static private $instance = NULL;
 
@@ -26,6 +27,15 @@ class Gestionnaire {
         $results = $this->bdd->query($requete);
         $this->festivaliers = $results->fetchAll();
         $results->closeCursor();
+
+		$requete='SELECT * FROM style';
+        $results = $this->bdd->query($requete);
+        $this->styles = $results->fetchAll();
+        $results->closeCursor();
+
+		for ($i=0; $i < count($this->styles); $i++) { 
+			$this->styles[$i] = new Style($this->styles[$i]["style_artiste"]);
+		}
 	}
 
 	/** Permet de récupérer l'instance de l'Gestionnaire */
@@ -53,22 +63,35 @@ class Gestionnaire {
 	}
 
 	/** Ajout un nouvel artiste */
-	public function ajouterArtiste($artiste) {
-		
+	public function ajouterArtiste($artiste, $style) {
 		if ($artiste instanceof Artiste) {
 			array_push($this->artistes, $artiste);
 		}
+		
 		$requete="INSERT INTO artiste (nom_artiste,prenom_artiste,date_crea,bio_artiste,nation_artiste,url_video_artiste,url_image_artiste) VALUES ('".$artiste->nom."','".$artiste->prenom."','".$artiste->dateDebut."','".$artiste->bio."','".$artiste->nation."','".$artiste->urlVideo."','".$artiste->urlImg."')";
 		$results = $this->bdd->query($requete);
 		$tabInsert = $results->fetchAll();
 		$results->closeCursor();
 
-		/*
+
 		//Cette requête permet d'obtenir l'id de l'artiste qu'on vient d'ajouter à partir de son nom. On suppose donc que deux artistes ne peuvent pas avoir le même nom
-		$requete = "SELECT id_artiste FROM artiste WHERE nom='".$artiste["nom"];
-		$results = $bdd->query($requete);
-		$tabidArtiste= $results->fetchAll();
-		$results->closeCursor();*/
+		$requete = "SELECT id_artiste FROM artiste WHERE nom_artiste='".$artiste->nom."'";
+		$results = $this->bdd->query($requete);
+		$tabidArtiste = $results->fetchAll();
+		$results->closeCursor();
+
+		//Cette requête permet d'obtenir l'id du style qu'on veut associer à l'artiste
+		$requete = "SELECT id_style FROM style WHERE style_artiste='".$style->nomStyle."'";
+		$results = $this->bdd->query($requete);
+		$tabidStyle = $results->fetchAll();
+		$results->closeCursor();
+
+		$requete="INSERT INTO lien_artiste_style (id_artiste, id_style) VALUES (".$tabidArtiste[0]["id_artiste"].",".$tabidStyle[0]["id_style"].")";
+		var_dump($requete);
+		$results = $this->bdd->query($requete);
+		$tabInsert = $results->fetchAll();
+		$results->closeCursor();
+
 	}
 
     	/** Modification d'un artiste */

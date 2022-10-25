@@ -36,6 +36,17 @@
                     Nation : <input type="text" name="nation" required></br>
                     URL d'une vidéo de l'artiste : <input type="text" name="video"></br>
                     IMG de l'artiste : <input type="text" name="img"></br>
+                    Style : <select name="style">
+                        <?php
+                        require_once("classes/Gestionnaire.php");
+                        session_start();
+                        $instance = Gestionnaire::getInstance();
+
+                        for ($i=0; $i < count($instance->styles); $i++) { 
+                            echo "<option>".$instance->styles[$i]["style_artiste"]."</option>";
+                        }
+                        ?>
+                    </select>
 
                 </br></br><input type="submit" value="Ajouter l'artiste">
                 <input type="reset" value="recommencer">
@@ -75,7 +86,12 @@
                                 $img = $_POST["img"];
                             }
                             $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$_POST["video"], $img);
-                            $instance->ajouterArtiste($newArtiste);
+                            for ($i=0; $i < count($instance->styles); $i++) { 
+                                if ($instance->styles[$i]->nomStyle == $_POST["style"]) {
+                                    $style = $instance->styles[$i];
+                                }
+                            }
+                            $instance->ajouterArtiste($newArtiste, $style);
                             echo "<h1>L'artiste a bien été ajouté !</h1>";
                             break;
 
