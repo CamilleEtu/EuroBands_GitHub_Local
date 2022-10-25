@@ -42,7 +42,7 @@
                     </li>
 
                     <li>
-                    <a href="#"><img src="./img/Angele.png" alt="" />
+                    <a href="#"><img src="./img/Angele.png" alt="" /></a>
                         <div class="overlay"><span>Angèle</span></div>
                     </li>
 
