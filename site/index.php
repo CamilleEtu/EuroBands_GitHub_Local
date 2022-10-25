@@ -8,7 +8,9 @@
     <title>EuroBands</title>
 </head>
 <body>
-
+        <?php
+        include 'header.php';
+        ?>
     <div class="container_p1">
         <h1>TITRE EXPLICATION DU FESTIVAL</h1>
         <div>

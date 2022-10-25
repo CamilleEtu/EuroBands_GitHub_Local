@@ -1,19 +1,16 @@
-@import url('http://fonts.cdnfonts.com/css/rockstar');
-
 * {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 h3 {
     border-bottom: solid 2px white;
-    
 }
 
 .container {  
     background-color: black;
     padding-bottom: 30px;
-    color: white;
 }
 
 .RS {
