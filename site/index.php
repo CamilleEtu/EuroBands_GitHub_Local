@@ -28,7 +28,7 @@
                     <img src="./img/spaghettis.jpg">
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat ligula eu commodo consequat. Proin convallis accumsan libero, vitae sagittis ligula dictum pellentesque. Nam at lorem nec odio consectetur cursus. Proin eu pharetra ipsum, bibendum dapibus urna. Proin tempus massa bibendum mauris consectetur, eu viverra nibh pellentesque.</p>
-                        <a href="#">Voir plus</a>
+                        <a href="#">En savoir plus</a>
                     </div>
                 </div>
             </div>
