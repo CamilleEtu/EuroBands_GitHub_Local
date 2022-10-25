@@ -18,7 +18,7 @@
 }
 
 .container_info > div > img {
-    height: 400px;
+    height: 365px;
     width: auto;
     margin: 20px;
     border-radius: 25px;
@@ -32,7 +32,8 @@
 
 .container_info > div > div > p {
     margin-bottom: 35px;
-    padding-left: 25px;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 .container_info > div > div > a {
@@ -41,4 +42,9 @@
     padding: 10px;
     border-radius: 10px;
     color: inherit;
+}
+
+.video_1 {
+    display: flex;
+    justify-content: center;
 }
