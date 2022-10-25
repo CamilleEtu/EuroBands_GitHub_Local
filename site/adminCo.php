@@ -4,46 +4,73 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link href="./css/styleAdminCo.css" rel="stylesheet"> 
+         <link href="./css/styleAdminCo.css" rel="stylesheet">
+         <link href="./css/style.css" rel="stylesheet">
+
         <title>EuroBands Admin</title>
     </head>
 
-    <?php
-
-    if (isset($_POST["login"])) {
-        if ($_POST["login"] == "admin" && $_POST["mdp"] == "eurobandsMDP") {
-            $_SESSION['admin'] = 'true';
-            header("location: index.php");
-            exit();
-        }
-        else{
-            if ($_POST["login"] != "admin" && $_POST["mdp"] != "eurobandsMDP") {
-                echo "<h1>Votre login et votre mot de passe sont incorects !</h1>";
-            }
-            else{
-                if ($_POST["login"] != "admin") {
-                    echo "<h1>Votre login est incorrect !</h1>";
-                }
-                else{
-                    echo "<h1>Votre mot de passe est incorrect !</h1>";
-                }
-            }
-        }
-    }
-
-    ?>
+    
     <body>
+        <!---HEADER-->
+        <header>
+            <?php
+                include 'header.php';
+            ?>
+        </header>
 
-        <div class="continer">
+
+        <!---FORM---->
+        <div class="continuer">
             <form action="" method="POST">
-                <label for="login">Entrez votre login</label>
-                <input type="text" name="login" id="login" required></br>
+                <div><label for="login" >login</label>
+                <input type="text" name="login" id="login" placeholder="Entrez votre identifiant" class="co" required></div></br>
                 
-                <label for="login">Entrez votre mot de passe</label>
-                <input type="password" name="mdp" id="mdp" required></br>
+                <div><label for="login">mdp</label>
+                <input type="password" name="mdp" id="mdp" placeholder="Entrez le mot de passe" class="co" required></div></br>
 
-                <input type="submit" value="Connexion">
+                <div><input type="submit" value="Connexion" class="submit"></div>
+
+                <div class="msgErreur">
+                    <?php
+
+                    if (isset($_POST["login"])) {
+                        if ($_POST["login"] == "admin" && $_POST["mdp"] == "eurobandsMDP") {
+                            $_SESSION['admin'] = 'true';
+                            header("location: index.php");
+                            exit();
+                        }
+                        else{
+                            if ($_POST["login"] != "admin" && $_POST["mdp"] != "eurobandsMDP") {
+                                echo "<h3>Votre login et votre mot de passe sont incorects !</h3>";
+                            }
+                            else{
+                                if ($_POST["login"] != "admin") {
+                                    echo "<h3>Votre login est incorrect !</h3>";
+                                }
+                                else{
+                                    echo "<h3>Votre mot de passe est incorrect !</h3>";
+                                }
+                            }
+                        }
+                    }
+
+                    ?>
+                </div>
         </div>
 
+        
+
+        <!---FOOTER---->
+        <footer>
+            <?php
+                include './footer.php';
+            ?>
+            
+        </footer>
+
     </body>
+
+
+
 </html>
