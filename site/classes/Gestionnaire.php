@@ -1,12 +1,6 @@
 <?php
-include("configuration.php");
 require_once 'Artiste.php';
 require_once 'Festivalier.php';
-
-session_start(); //permet de lancer la session, on poura alors utilsier des variables de session
-
-//permet de se connecter à la base de donnée et de récupérer tous les héros du meilleur au moins bon (en fonction du classement)
-$bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
 
 /* 
 Classe de la base de Gestionnaire (singleton)
@@ -55,10 +49,21 @@ class Gestionnaire {
 	}
 
 	/** Ajout un nouvel artiste */
-	public function ajouterArtiste($artiste) {
+	public function ajouterArtiste($bdd,$artiste) {
 		if ($artiste instanceof Artiste) {
 			array_push($this->artistes, $artiste);
 		}
+		$requete="INSERT INTO artiste (nom_artiste,prenom_artiste,date_crea,bio_artiste,nation_artiste,url_video_artiste,url_image_artiste) VALUES ('".$artiste["nom"]."','".$artiste["prenom"]."','".$artiste["dateDebut"]."','".$artiste["bio"]."','".$artiste["nation"]."','".$artiste["urlVideo"]."','".$artiste["urlImg"].")";
+		$results = $bdd->query($requete);
+		$tabInsert = $results->fetchAll();
+		$results->closeCursor();
+
+		/*
+		//Cette requête permet d'obtenir l'id de l'artiste qu'on vient d'ajouter à partir de son nom. On suppose donc que deux artistes ne peuvent pas avoir le même nom
+		$requete = "SELECT id_artiste FROM artiste WHERE nom='".$artiste["nom"];
+		$results = $bdd->query($requete);
+		$tabidArtiste= $results->fetchAll();
+		$results->closeCursor();*/
 	}
 
     	/** Modification d'un artiste */

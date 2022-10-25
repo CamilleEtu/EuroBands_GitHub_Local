@@ -10,38 +10,83 @@
     </head>
     <body>
         <?php
-        if (!isset($_GET["choix"])) {
-            ?>
-                    <h1>Que voulez-vous faire ?</h1>
-        <a href="gestArtistes.php?choix=1"><input type="button" value="Ajouter un nouvel artiste"></a>
-        <a href="gestArtistes.php?choix=2"><input type="button" value="Modifier un artiste existant"></a>
-        <a href="gestArtistes.php?choix=3"><input type="button" value="Supprimer un artiste"></a>
-        
-        <?php
-        }
-        else{
-            switch ($_GET["choix"]) {
-                case 1:
-                    ?>
+        //besoin temporaire en attendant de pouvoir travailler dans index.php
+        $_SESSION['admin'] = 'true';
+        if (isset($_SESSION['admin'])) {
+            if (!isset($_GET["choix"])) {
+                ?>
+                        <h1>Que voulez-vous faire ?</h1>
+            <a href="gestArtistes.php?choix=1"><input type="button" value="Ajouter un nouvel artiste"></a>
+            <a href="gestArtistes.php?choix=2"><input type="button" value="Modifier un artiste existant"></a>
+            <a href="gestArtistes.php?choix=3"><input type="button" value="Supprimer un artiste"></a>
+            
+            <?php
+            }
+            else{
+                switch ($_GET["choix"]) {
+                    case 1:
 
-                    <h1>Ajout d'artistes</h1>
-                    <?php
-                    break;
-                case 2:
-                    ?>
-                    <h1>Modification d'artistes</h1>
+                ?>
+                <h1>Ajout d'un Artiste</h1>
+                <form method="POST" action="gestArtistes.php?ajout=1&choix=1">
+                    Nom : <input type="text" name="nom" required></br>
+                    Prénom (s'il existe) : <input type="text" name="prenom"></br>
+                    Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01"></br>
+                    Description de l'artiste : <textarea name="bio" required></br>
+                    Nation : <input type="text" name="nation"></br>
+                    URL d'une vidéo de l'artiste : <input type="text" name="video"></br>
+                    IMG de l'artiste : <input type="text" name="img"></br>
 
-                    <?php
-                    break;
-                case 3:
-                    ?>
-                    <h1>Suppression d'artiste</h1>
-                    <?php
-                    break;
-                default:
-                    break;
+                </br></br><input type="submit" value="Ajouter l'artiste">
+                <input type="reset" value="recommencer">
+                </form>
+                    
+                <?php
+                        break;
+                    case 2:
+                        ?>
+                        <h1>Modification d'artistes</h1>
+
+                        <?php
+                        break;
+                    case 3:
+                        ?>
+                        <h1>Suppression d'artiste</h1>
+                        <?php
+                        break;
+                    default:
+                        break;
+                }
+                //permet d'afficher un message de confirmation d'ajout, de modification ou de suppression en fonction du choix de l'utilisateur et de lancer sa fonction associée pour le Gestionnaire
+                if (isset($_GET["ajout"])) {
+                    include("configuration.php");
+                    require_once("Artiste.php");
+                    require_once("Gestionnaire.php");
+                    session_start();
+                    //permet de se connecter à la base de donnée et de récupérer tous les héros du meilleur au moins bon (en fonction du classement)
+                    $bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
+                    $instance = Gestionnaire::getInstance();
+                    switch ($_GET["ajout"]) {
+                        case 1:
+                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$_POST["video"], $_POST["img"]);
+                            $instance->ajouterArtiste($bdd,$newArtiste);
+                            echo "<h1>Le héro a bien été ajouté !</h1>";
+                            break;
+
+                        case 2:
+                            modifHero($bdd,$_GET["idHero"],$_POST["prenom"],$_POST["nom"],$_POST["puissance"],$_POST["url"],$_POST["classe"],$_POST["citation"],$tabIdQuete);
+                            echo "<h1>Le héro a bien été modifié !</h1>";
+                            break;
+                        case 3:
+                            suppHero($bdd,$_POST["hero"]);
+                            echo "<h1>Le héro a bien été supprimé !</h1>";
+                    }
+                }
             }
         }
-        ?>
+        else{
+            echo "<h1>Vous n'avez pas les droits pour accéder à cette page</h1>";
+        }
+            ?>
     </body>
 </html>
