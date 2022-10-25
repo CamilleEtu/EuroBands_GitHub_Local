@@ -8,32 +8,31 @@
 }
 
 .container_reserv {
+    display: flex;
+    flex-direction: column;
     padding: 4em;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 
 .container_reserv > div {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-wrap: row;
 }
 
-.container_reserv > div > img {
-    height: 365px;
-    width: auto;
-    margin: 20px;
-    border-radius: 25px;
+.container_reserv > div > div {
+    width: 50%;
 }
 
-.container_reserv > div > div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.container_reserv > div > div > h2 {
+    text-align: center;
 }
 
 .container_reserv > div > div > p {
-    margin-bottom: 35px;
     padding-left: 4em;
     padding-right: 4em;
+    padding: 1.5em;
 }
 
 .container_reserv > div > div > a {
@@ -46,4 +45,13 @@
 
 .container_reserv > div > div > h2{
     font-size: 20px;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(226, 226, 226);
+    padding: 1em;
+    border-radius: 10px;
+    align-items: center;
 }
