@@ -1,7 +1,10 @@
 body {
 	overflow: hidden;
+	margin: 0;
+	padding: 0;
 }
 
+/* flèches */
 label {
 	background-image: #444;
 	color: #fff;
@@ -18,7 +21,6 @@ label {
 }
 
 form {
-	position: absolute;
 	top: 0;
 	left: 0;
 	white-space: nowrap;
@@ -52,13 +54,24 @@ input:nth-of-type(4):checked ~ label {
 }
 
 label {
-	background: blue;
 	font-size: 3rem;
+	background-repeat: no-repeat;
 }
 
-label[for="diamonds"],
+label[for="clubs"] {
+	background-image: url(../site/img/pates.jpg);
+}
+
 label[for="hearts"] {
-	background: green;
+	background-image: url(../site/img/pates.jpg);
+}
+
+label[for="spades"] {
+	background-image: url(../site/img/pates.jpg);
+}
+
+label[for="diamonds"] {
+	background-image: url(../site/img/pates.jpg);
 }
 
 /* style des flèches */
