@@ -9,6 +9,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*-----------HEADER---------------*/
 .container_header {
     background-color: #1e1e1e;
     display: flex;
@@ -20,8 +21,7 @@
     text-decoration: none;
     list-style: none;
     padding: 8px ;
-    color: white;
-    border-radius: 10px;
+    color: #f4f4f4;
 }
 
 .container_header .navbar > ul {
@@ -35,24 +35,36 @@
 
 
 .container_header > .resa {
-    color: rgb(255, 255, 255);
+    color: #f4f4f4;
     background-color: #003194;
-    border-radius: 10px;
     margin-right: 50px;
 }
 
 .container_header > .resa:hover {
     color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    transition: .3s;
+    background-color: #f4f4f4;
+    border-radius: 50px;
+    transition: 1s;
+}
+.container_header > .resa:not(:hover) {
+    transition: 1s;
 }
 
-.container_header nav > ul > li > a:hover {
-    color: black;
-    background-color: white;
-    border-radius: 10px;
+/* effet soulignement */
+.container_header nav > ul > li > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2.5px;
+    background: #f4f4f4;
+    transition: width .3s;
 }
+
+.container_header nav > ul > li > a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+/* fin soulignement */
 
 
 
@@ -65,6 +77,8 @@
     opacity: 75%;
     transition: 0.5s;
 }
+
+/*------------FOOTER--------------*/
 .logo2 {
     width: 45px;
     height: auto;
@@ -75,7 +89,7 @@
 }
 
 h3 {
-    border-bottom: solid 2px white;
+    border-bottom: solid 2px #f4f4f4;
 }
 
 .container_footer {  
@@ -110,20 +124,31 @@ nav > ul {
 }
 
 .container_footer > .RS > a:hover {
-    border: solid 2px white;
+    border: solid 2px #f4f4f4;
     border-radius: 10px;
 }
 
-.container_footer > nav > ul > li > ul > a > li:hover {
-    color: black;
-    background-color: white;
-    border-radius: 10px;
+/* effet soulignement */
+.container_footer > nav > ul > li > ul > a > li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2.5px;
+    background: #f4f4f4;
+    transition: width .3s;
 }
+
+.container_footer > nav > ul > li > ul > a > li:hover::after {
+    width: 80%;
+    transition: width .3s;
+}
+/* fin soulignement */
 
 .container_footer p {
     padding: 15px 0px;
 }
 
+/*-----------CONTENU--------------*/
 .container_p1 {
     display: flex;
     flex-direction: column;
@@ -166,7 +191,7 @@ nav > ul {
 
 .container_p1 > div > div > a {
     text-decoration: none;
-    background-color: rgb(213, 213, 213);
+    background-color: #f4f4f4;
     padding: 10px;
     border-radius: 10px;
     color: inherit;
@@ -174,7 +199,7 @@ nav > ul {
 }
 
 .container_p1 > div > div > a:hover {
-    background-color: rgb(179, 179, 179);
+    background-color: #f4f4f4;
 }
 
 .image-gallery {
@@ -182,7 +207,7 @@ nav > ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 45px;
-    background-color: rgb(255, 243, 243);
+    background-color: #f4f4f4;
     padding: 45px;
   }
   

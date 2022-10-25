@@ -39,7 +39,6 @@ h3 {
     transition: 0.75s;
 }
 .continuer .submit:hover {
-    transition: 0.75s;
     background-color: #1e1e1e;
     color: #f4f4f4;
     border-radius: 25px;
