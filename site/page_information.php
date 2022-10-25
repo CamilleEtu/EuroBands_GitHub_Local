@@ -22,7 +22,7 @@
                     <img src="./img/Angele.png">
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat ligula eu commodo consequat. Proin convallis accumsan libero, vitae sagittis ligula dictum pellentesque. Nam at lorem nec odio consectetur cursus. Proin eu pharetra ipsum, bibendum dapibus urna. Proin tempus massa bibendum mauris consectetur, eu viverra nibh pellentesque.</p>
-                        <a href="#">En savoir plus</a>
+                        <p>Nam maximus libero a posuere malesuada. Donec sollicitudin, augue vitae lacinia rhoncus, risus sem tempus odio, vitae pulvinar augue nibh id dui. Proin eget purus vitae ex consequat bibendum vel a est.</p>
                     </div>
                 </div>
             </div>
