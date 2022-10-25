@@ -6,6 +6,7 @@
         <meta type="keywords" content="eurobands, festival, music, international">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/PageInfo.css"/>
     </head>
 
     <body>
@@ -15,7 +16,7 @@
             ?>
         </header>
 
-        <div class="container_p1">
+        <div class="container_info">
                 <h1 class="titre_accueil">A propos d'eurobands</h1>
                 <div>
                     <img src="./img/Angele.png">
