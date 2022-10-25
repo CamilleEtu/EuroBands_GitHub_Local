@@ -28,7 +28,7 @@
 
                 ?>
                 <h1>Ajout d'un Artiste</h1>
-                <form method="POST" action="gestArtistes.php?ajout=1&choix=1">
+                <form method="POST" action="gestArtistes.php?ajout=1">
                     Nom : <input type="text" name="nom" required></br>
                     Prénom (s'il existe) : <input type="text" name="prenom"></br>
                     Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01" required></br>
@@ -57,6 +57,7 @@
                     default:
                         break;
                 }
+            }
 
                 //permet d'afficher un message de confirmation d'ajout, de modification ou de suppression en fonction du choix de l'utilisateur et de lancer sa fonction associée pour le Gestionnaire
                 if (isset($_GET["ajout"])) {
@@ -73,7 +74,7 @@
                             else{
                                 $img = $_POST["img"];
                             }
-                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$video, $img);
+                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$_POST["video"], $img);
                             $instance->ajouterArtiste($newArtiste);
                             echo "<h1>L'artiste a bien été ajouté !</h1>";
                             break;
@@ -88,7 +89,6 @@
                     }
                 }
             }
-        }
         else{
             echo "<h1>Vous n'avez pas les droits pour accéder à cette page</h1>";
         }
