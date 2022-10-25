@@ -28,7 +28,7 @@
 
             <div class="container_p2">
                 <h1 class="titre_accueil">ARTISTES</h1>
-                <ul class="image-gallery">
+                <ul id="artistes" class="image-gallery">
                     <li>
                         <a href="#"><img src="./img/SAM_the_kid.png" alt=""/></a>
                         <div class="overlay"><span>Sam The Kid</span></div>

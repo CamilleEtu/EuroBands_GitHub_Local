@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="container_header">
-        <a href=""><img class="logo" src="img/logo_small.png"></a>
+        <a href="./index.php"><img class="logo" src="img/logo_small.png"></a>
         <nav class="navbar">
             <ul>
-                <li><a href="">Artiste</a></li>
-                <li><a href="">En savoir plus</a></li>
+                <li><a href="#artistes">Artiste</a></li>
+                <li><a href="./page_information.php">En savoir plus</a></li>
             </ul>
         </nav>
         <a class="resa" href="">Réservation</a>
