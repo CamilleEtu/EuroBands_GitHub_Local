@@ -50,7 +50,7 @@ $nbArt = count($tableauArt);
             for ($i = 0; $i < $nbArt; $i++) {
                 echo
                 '<li>
-                    <a href="stars2bis.php?id=' . $tableauArt[$i]["id_artiste"] . '">
+                    <a href="PageArtistes.php?id=' . $tableauArt[$i]["id_artiste"] . '">
                     <img class="illuArt" src="' . $tableauArt[$i]['url_image_artiste'] . '"></a>
                     <div class="overlay"><span>' .$tableauArt[$i]['prenom_artiste']. " " . $tableauArt[$i]['nom_artiste'] . '</span></div>
                  </li>';
