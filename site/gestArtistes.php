@@ -33,6 +33,7 @@
                     Prénom (s'il existe) : <input type="text" name="prenom"></br>
                     Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01" required></br>
                     Description de l'artiste : <textarea name="bio" required rows="8" cols="33" required>Il s'agit d'un artiste de ...</textarea></br>
+                    Description de l'artiste en anglais: <textarea name="bioAnglais" required rows="8" cols="33" required>It's about ...</textarea></br>
                     Nation : <input type="text" name="nation" required></br>
                     URL d'une vidéo de l'artiste : <input type="text" name="video"></br>
                     IMG de l'artiste : <input type="text" name="img"></br>
@@ -55,14 +56,13 @@
                 <?php
                         break;
                     case 2:
-                        ?>
-                        <h1>Modification d'artistes</h1>
-                        <?php
+                        
+                        echo '<h1>Modification d\'artistes</h1>';
                         require_once("classes/Gestionnaire.php");
                         session_start();
                         $instance = Gestionnaire::getInstance();
 
-                        //affiche un select pour que l'utilisateur choisisse le héros qu'il veut mosifier
+                        //affiche un select pour que l'utilisateur choisisse l'artiste qu'il veut modifier'
                         echo "<form action='gestArtistes.php?choix=4' method='POST'><select name='artiste'>";
                         for ($i=0; $i < count($instance->artistes); $i++) { 
                             //on affiche le nom, prénom si existant de l'artiste et la nationnalité pour chaque option
@@ -75,8 +75,22 @@
                         <?php
                         break;
                     case 3:
+                        
+                        echo "<h1>Suppression d'artiste</h1>";
+                        require_once("classes/Gestionnaire.php");
+                        session_start();
+                        $instance = Gestionnaire::getInstance();
+
+                        //affiche un select pour que l'utilisateur choisisse l'artiste qu'il veut modifier
+                        echo "<form action='gestArtistes.php?ajout=3' method='POST'><select name='artiste'>";
+                        for ($i=0; $i < count($instance->artistes); $i++) { 
+                            //on affiche le nom, prénom si existant de l'artiste et la nationnalité pour chaque option
+                            echo "<option>".$instance->artistes[$i]->prenom." ".$instance->artistes[$i]->nom." (".$instance->artistes[$i]->nation.")</option>";
+                        }
+                        echo "</select></br></br>";
                         ?>
-                        <h1>Suppression d'artiste</h1>
+                        <input type="submit" value="Supprimer l'artiste">
+                        </form>
                         <?php
                         break;
                     case 4:
@@ -84,22 +98,20 @@
                         session_start();
                         $instance = Gestionnaire::getInstance();
                         echo "<h1>Modification de ".$_POST["artiste"]."</h1>";
-                        var_dump(count($instance->artistes));
                         for ($i=0; $i < count($instance->artistes); $i++) { 
                             if(strpos($_POST["artiste"], $instance->artistes[$i]->nom) !== false){
-                                var_dump("ITS ALIVE");
-                                echo '<form method="POST" action="gestArtistes.php?ajout=1">';
+                                echo '<form method="POST" action="gestArtistes.php?ajout=2&id='.$instance->artistes[$i]->id.'">';
                                 echo 'Nom : <input type="text" name="nom" required value='.$instance->artistes[$i]->nom.'></br>';
                                 echo 'Prénom (s\'il existe) : <input type="text" name="prenom" value ='.$instance->artistes[$i]->prenom.'></br>';
-                                echo 'Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01" required value='.$instance->artistes[$i]->dateDebut.'></br>';
-
+                                echo 'Date de début de carrière : <input type="date" name="dateDebut" min="1950-01-01" max="2022-01-01" required value='.$instance->artistes[$i]->dateDebut.'></br>';
                                 echo 'Description de l\'artiste : <textarea name="bio" required rows="8" cols="33" required>'.$instance->artistes[$i]->bio.'</textarea></br>';
+                                echo 'Description de l\'artiste en anglais : <textarea name="bioAnglais" required rows="8" cols="33" required>'.$instance->artistes[$i]->bioAnglais.'</textarea></br>';
                                 echo 'Pays : <input type="text" name="nation" required value='.$instance->artistes[$i]->nation.'></br>';
                                 echo 'URL d\'une vidéo de l\'artiste : <input type="text" name="video" value='.$instance->artistes[$i]->urlVideo.'></br>';
                                 echo 'IMG de l\'artiste : <input type="text" name="img" value='.$instance->artistes[$i]->urlImg.'></br>';
                                 echo 'Style : <select name="style">';
                                 for ($v=0; $v < count($instance->styles); $v++) { 
-                                    if ($instance->styles->nomStyle == $instance->artistes[$v]->styles->nomStyle) {
+                                    if ($instance->styles[$v]->nomStyle == $instance->artistes[$i]->style) {
                                         echo "<option selected>".$instance->styles[$v]->nomStyle."</option>";
                                     }
                                     else{
@@ -138,17 +150,28 @@
                                     $style = $instance->styles[$i];
                                 }
                             }
-                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$_POST["video"], $img, $style);
+                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["bioAnglais"],$_POST["nation"],$_POST["video"], $img, $style);
                             $instance->ajouterArtiste($newArtiste);
                             echo "<h1>L'artiste a bien été ajouté !</h1>";
                             break;
 
                         case 2:
-                          //  modifHero($bdd,$_GET["idHero"],$_POST["prenom"],$_POST["nom"],$_POST["puissance"],$_POST["url"],$_POST["classe"],$_POST["citation"],$tabIdQuete);
+                            for ($i=0; $i < count($instance->styles); $i++) { 
+                                if ($instance->styles[$i]->nomStyle == $_POST["style"]) {
+                                    $style = $instance->styles[$i];
+                                }
+                            }
+                            $modifArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["bioAnglais"],$_POST["nation"],$_POST["video"], $_POST["img"], $style);
+                            $instance->modifArtiste($modifArtiste, $_GET["id"]);
                             echo "<h1>L'artiste a bien été modifié !</h1>";
                             break;
                         case 3:
-                          //  suppHero($bdd,$_POST["hero"]);
+                            for ($i=0; $i < count($instance->artistes); $i++) { 
+                                if(strpos($_POST["artiste"], $instance->artistes[$i]->nom) !== false){
+                                    $deleteArtiste = $instance->artistes[$i];
+                                }
+                            }
+                            $instance->supArtiste($deleteArtiste);
                             echo "<h1>L'artiste a bien été supprimé !</h1>";
                     }
                 }
