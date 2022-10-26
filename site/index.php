@@ -27,17 +27,15 @@ $nbArt = count($tableauArt);
     <header>
         <?php
         include './header.php';
+        include("lang.php");
         ?>
     </header>
 
     <div class="container_p1">
-        <h1 class="titre_accueil">Bienvenue à Eurobands</h1>
         <div>
             <img src="./img/Angele.png">
             <div>
-                <p>En 2023, nous célébrons les 30 ans de la création de l’Union Européenne. A cette occasion, Le Puy en Velay a choisi d’organiser un événement exceptionnel, à la hauteur de l'événement. 4 soirées, 12 artistes et groupes venus des 4 coins de l’Europe..
-                    Venez célébrer cet événement unique du 22 au 25 juin 2023, place du Breuil au Puy en Velay. Pour célébrer l'interculturalité de l’événement, les concerts seront retransmis à la télévision, et dans différents pays d’Europe, il sera possible d’y assister en version holographique.
-                </p>
+                <?php echo texte_acc; ?>
                 <a href="./page_information.php">Voir plus</a>
             </div>
         </div>

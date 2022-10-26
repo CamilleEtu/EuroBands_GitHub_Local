@@ -68,7 +68,7 @@ form {
 .input_reserv {
   background-color: rgb(223, 223, 223);
   border: none;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
 }
 
@@ -83,7 +83,7 @@ form {
 
 .input_reserv:focus {
   outline: none;
-  padding: 10px;
+  padding: 13px;
   color: black;
 }
 

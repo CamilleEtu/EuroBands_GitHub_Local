@@ -17,6 +17,7 @@
             </ul>
         </nav>
         <a class="resa" href="./reservation.php">Réservation</a>
+        <a href="?lang=en">EN</a> <a href="?lang=fr">FR</a>
     </div>
 </body>
 </html>
