@@ -16,7 +16,7 @@
                 <li><a href="./page_information.php">En savoir plus</a></li>
             </ul>
         </nav>
-        <a class="resa" href="">Réservation</a>
+        <a class="resa" href="./reservation.php">Réservation</a>
     </div>
 </body>
 </html>
