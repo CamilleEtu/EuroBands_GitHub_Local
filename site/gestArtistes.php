@@ -57,13 +57,44 @@
                     case 2:
                         ?>
                         <h1>Modification d'artistes</h1>
+                        <?php
+                        require_once("classes/Gestionnaire.php");
+                        session_start();
+                        $instance = Gestionnaire::getInstance();
 
+                        //affiche un select pour que l'utilisateur choisisse le héros qu'il veut mosifier
+                        echo "<form action='gestArtistes.php?choix=4' method='POST'><select name='artiste'>";
+                        for ($i=0; $i < count($instance->artistes); $i++) { 
+                            //on affiche le nom, prénom si existant de l'artiste et la nationnalité pour chaque option
+                            echo "<option>".$instance->artistes[$i]->prenom." ".$instance->artistes[$i]->nom." (".$instance->artistes[$i]->nation.")</option>";
+                        }
+                        echo "</select></br></br>";
+                        ?>
+                <input type="submit" value="Modifier l'artiste">
+                </form>
                         <?php
                         break;
                     case 3:
                         ?>
                         <h1>Suppression d'artiste</h1>
                         <?php
+                        break;
+                    case 4:
+                        require_once("classes/Gestionnaire.php");
+                        session_start();
+                        $instance = Gestionnaire::getInstance();
+                        for ($i=0; $i < count($instance->artistes); $i++) { 
+                            if(strpos($_POST["artiste"], $instance->artistes[$i]->nom) !== false){
+                                var_dump("ITS ALIVE");
+                            }
+                        }
+/*
+                        for ($i=0; $i < count($instance->styles); $i++) { 
+                            if(strpos($_POST["artiste"], $instance->artistes[$i]->nom) !== false){
+                                var_dump("ITS ALIVE");
+                            }
+                        }*/
+                        echo "<h1>Modification de ".$_POST["artiste"]."</h1>";
                         break;
                     default:
                         break;
@@ -85,13 +116,13 @@
                             else{
                                 $img = $_POST["img"];
                             }
-                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$_POST["video"], $img);
                             for ($i=0; $i < count($instance->styles); $i++) { 
                                 if ($instance->styles[$i]->nomStyle == $_POST["style"]) {
                                     $style = $instance->styles[$i];
                                 }
                             }
-                            $instance->ajouterArtiste($newArtiste, $style);
+                            $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["nation"],$_POST["video"], $img, $style);
+                            $instance->ajouterArtiste($newArtiste);
                             echo "<h1>L'artiste a bien été ajouté !</h1>";
                             break;
 

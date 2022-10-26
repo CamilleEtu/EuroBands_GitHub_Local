@@ -19,28 +19,33 @@ class Gestionnaire {
 		require_once 'configuration.php';
 		$this->bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
 
-        $requete='SELECT * FROM artiste';
-        $results = $this->bdd->query($requete);
-        $this->artistes = $results->fetchAll();
-        $results->closeCursor();
-
-		for ($i=0; $i < count($this->artistes); $i++) { 
-			$this->artistes[$i] = new Artiste($this->artistes[$i]["nom_artiste"], $this->artistes[$i]["prenom_artiste"], $this->artistes[$i]["date_crea"], $this->artistes[$i]["bio_artiste"], $this->artistes[$i]["nation_artiste"], $this->artistes[$i]["url_video_artiste"], $this->artistes[$i]["url_image_artiste"]);
-		}
-
-        $requete='SELECT * FROM festivalier';
-        $results = $this->bdd->query($requete);
-        $this->festivaliers = $results->fetchAll();
-        $results->closeCursor();
-
 		$requete='SELECT * FROM style';
         $results = $this->bdd->query($requete);
         $this->styles = $results->fetchAll();
         $results->closeCursor();
 
 		for ($i=0; $i < count($this->styles); $i++) { 
-			$this->styles[$i] = new Style($this->styles[$i]["style_artiste"]);
+			$this->styles[$i] = new Style($this->styles[$i]["id_style"],$this->styles[$i]["style_artiste"]);
 		}
+
+        $requete='SELECT * FROM artiste';
+        $results = $this->bdd->query($requete);
+        $this->artistes = $results->fetchAll();
+        $results->closeCursor();
+
+		$requete='SELECT * FROM lien_artiste_style';
+        $results = $this->bdd->query($requete);
+        $tabLienArtisteStyle = $results->fetchAll();
+        $results->closeCursor();
+
+		for ($i=0; $i < count($this->artistes); $i++) { 
+			$this->artistes[$i] = new Artiste($this->artistes[$i]["id_artiste"],$this->artistes[$i]["nom_artiste"], $this->artistes[$i]["prenom_artiste"], $this->artistes[$i]["date_crea"], $this->artistes[$i]["bio_artiste"], $this->artistes[$i]["nation_artiste"], $this->artistes[$i]["url_video_artiste"], $this->artistes[$i]["url_image_artiste"], NULL);
+		}
+        $requete='SELECT * FROM festivalier';
+        $results = $this->bdd->query($requete);
+        $this->festivaliers = $results->fetchAll();
+        $results->closeCursor();
+
 	}
 
 	/** Permet de récupérer l'instance de l'Gestionnaire */
@@ -68,7 +73,7 @@ class Gestionnaire {
 	}
 
 	/** Ajout un nouvel artiste */
-	public function ajouterArtiste($artiste, $style) {
+	public function ajouterArtiste($artiste) {
 		if ($artiste instanceof Artiste) {
 			array_push($this->artistes, $artiste);
 		}
