@@ -1,7 +1,7 @@
 <?php
 
     //var_dump($_POST);
-    
+
     $bdd = new PDO('mysql:host=localhost;port=3306;dbname=eurobands','root', '');
         // récupère toutes les informations de la table "festivalier"
         $requete = 'SELECT * FROM festivalier';
@@ -55,10 +55,6 @@
 
         }
 
-        /*
-        1) on insert un festivalier
-
-        */
 ?>
 
 <html>
