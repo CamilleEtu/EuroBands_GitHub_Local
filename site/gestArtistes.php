@@ -43,7 +43,7 @@
                         $instance = Gestionnaire::getInstance();
 
                         for ($i=0; $i < count($instance->styles); $i++) { 
-                            echo "<option>".$instance->styles[$i]["style_artiste"]."</option>";
+                            echo "<option>".$instance->styles[$i]->nomStyle."</option>";
                         }
                         ?>
                     </select>

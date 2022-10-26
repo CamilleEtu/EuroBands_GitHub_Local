@@ -18,10 +18,15 @@ class Gestionnaire {
 	private function __construct() {
 		require_once 'configuration.php';
 		$this->bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
+
         $requete='SELECT * FROM artiste';
         $results = $this->bdd->query($requete);
         $this->artistes = $results->fetchAll();
         $results->closeCursor();
+
+		for ($i=0; $i < count($this->artistes); $i++) { 
+			$this->artistes[$i] = new Artiste($this->artistes[$i]["nom_artiste"], $this->artistes[$i]["prenom_artiste"], $this->artistes[$i]["date_crea"], $this->artistes[$i]["bio_artiste"], $this->artistes[$i]["nation_artiste"], $this->artistes[$i]["url_video_artiste"], $this->artistes[$i]["url_image_artiste"]);
+		}
 
         $requete='SELECT * FROM festivalier';
         $results = $this->bdd->query($requete);
@@ -67,8 +72,9 @@ class Gestionnaire {
 		if ($artiste instanceof Artiste) {
 			array_push($this->artistes, $artiste);
 		}
-		
-		$requete="INSERT INTO artiste (nom_artiste,prenom_artiste,date_crea,bio_artiste,nation_artiste,url_video_artiste,url_image_artiste) VALUES ('".$artiste->nom."','".$artiste->prenom."','".$artiste->dateDebut."','".$artiste->bio."','".$artiste->nation."','".$artiste->urlVideo."','".$artiste->urlImg."')";
+		$nomEchape = $this->bdd->quote($artiste->nom);
+		$bioEchape = $this->bdd->quote($artiste->bio);
+		$requete="INSERT INTO artiste (nom_artiste,prenom_artiste,date_crea,bio_artiste,nation_artiste,url_video_artiste,url_image_artiste) VALUES (".$nomEchape.",'".$artiste->prenom."','".$artiste->dateDebut."',".$bioEchape.",'".$artiste->nation."','".$artiste->urlVideo."','".$artiste->urlImg."')";
 		$results = $this->bdd->query($requete);
 		$tabInsert = $results->fetchAll();
 		$results->closeCursor();
@@ -87,7 +93,6 @@ class Gestionnaire {
 		$results->closeCursor();
 
 		$requete="INSERT INTO lien_artiste_style (id_artiste, id_style) VALUES (".$tabidArtiste[0]["id_artiste"].",".$tabidStyle[0]["id_style"].")";
-		var_dump($requete);
 		$results = $this->bdd->query($requete);
 		$tabInsert = $results->fetchAll();
 		$results->closeCursor();
