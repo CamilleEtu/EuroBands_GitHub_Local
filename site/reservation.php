@@ -78,9 +78,9 @@
                 <?php
                 if (!isset($_GET["ajout"])) {
                 ?>
-                <div class="formulaire">
-                    <h2>Formulaire de pré-inscription</h2>
-                    <form action="form_festi.php?ajout=1" method="POST" class="form_festi">
+                    <div class="formulaire">
+                        <h2>Formulaire de pré-inscription</h2>
+                        <form action="form_festi.php?ajout=1" method="POST" class="form_festi">
                             <div>
                                 <label for="nom">Entrez votre Nom : </label>
                                 <input class="input_reserv" type="text" name="nom" id="nom" placeholder="Nom" required>
@@ -110,7 +110,7 @@
                                 <input class="bouton_reserv" type="submit" value="Se pré-inscrire">
                                 <input class="bouton_reserv" type="reset" value="Effacer">
                             </div>
-                    </form>
+                        </form>
                     </div>
 
                 <?php

@@ -1,7 +1,7 @@
 let indice=0;
 let zoneaf;
-let tab = new Array (5);
-let tableau = ["img/about-bg.jpg", "img/intro-bg.jpg", "img/subscribe-bg.jpg", "img/venue-info-bg.jpg", "img/hotels/1.jpg"];
+let tab = new Array (4);
+let tableau = ["./img/GLOBAL.png", "./img/ELECTRO_POP.png", "./img/ELECTRO_RAP.png", "./img/POP_ROCK.png"];
 
 function defilementTemps() {
     zoneaf.textContent = tableau[indice];

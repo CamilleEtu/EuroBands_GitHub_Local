@@ -20,6 +20,7 @@ $nbArt = count($tableauArt);
     <meta type="keywords" content="eurobands, festival, music, international">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>EuroBands</title>
 </head>
 
 <body>
@@ -30,6 +31,12 @@ $nbArt = count($tableauArt);
         include("lang.php");
         ?>
     </header>
+
+    <div class="carrousel">
+            <?php
+            include "./carrousel_V2.php"
+            ?>
+    </div>
 
     <div class="container_p1">
         <div>
