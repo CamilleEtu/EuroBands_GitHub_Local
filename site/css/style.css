@@ -1,7 +1,4 @@
-@font-face {
-    font-family: "Redwing";
-    src: local("../font/Redwing-Medium.otf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     margin: 0;
@@ -192,8 +189,9 @@ nav > ul {
     display: flex;
     justify-content: center;
     margin : 15px;
-    font-family: 'Redwing', sans-serif;
     text-transform: uppercase;
+    font-size: 55px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .container_p1 > div {
@@ -226,11 +224,15 @@ nav > ul {
     padding: 10px;
     border-radius: 10px;
     color: inherit;
-    transition: .3s;
 }
 
 .container_p1 > div > div > a:hover {
     background-color: #f4f4f4;
+    transition: .3s;
+}
+
+.container_p1 > div > div > a:not(hover) {
+    transition: .3s;
 }
 
 .image-gallery {
@@ -264,4 +266,9 @@ nav > ul {
     padding: 20px;
     padding-left: 4em;
     padding-right: 4em;
+}
+
+.description_nb_artistes {
+    text-align: center;
+    padding: 1em;
 }
