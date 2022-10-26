@@ -30,7 +30,7 @@ $nbArt = count($tableauArt);
     </header>
 
     <div class="container_p1">
-        <h1 class="titre_accueil">Bienvenue à eurobands</h1>
+        <h1 class="titre_accueil">Bienvenue à Eurobands</h1>
         <div>
             <img src="./img/Angele.png">
             <div>

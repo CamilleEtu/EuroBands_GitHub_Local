@@ -1,7 +1,7 @@
 .container_reserv {
     display: flex;
     flex-direction: column;
-    padding: 4em;
+    padding: 2em;
     padding-left: 10em;
     padding-right: 10em;
 }
