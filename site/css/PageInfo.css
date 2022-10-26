@@ -35,6 +35,10 @@
     color: inherit;
 }
 
+.container_info > div > div > p {
+    font-size: 18px;
+}
+
 .video_1 {
     display: flex;
     justify-content: center;

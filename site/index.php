@@ -23,6 +23,7 @@ $nbArt = count($tableauArt);
 </head>
 
 <body>
+    <!-- Appel du header depuis le fichier header.php -->
     <header>
         <?php
         include './header.php';
@@ -34,14 +35,17 @@ $nbArt = count($tableauArt);
         <div>
             <img src="./img/Angele.png">
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat ligula eu commodo consequat. Proin convallis accumsan libero, vitae sagittis ligula dictum pellentesque. Nam at lorem nec odio consectetur cursus. Proin eu pharetra ipsum, bibendum dapibus urna. Proin tempus massa bibendum mauris consectetur, eu viverra nibh pellentesque.</p>
-                <a href="#">Voir plus</a>
+                <p>En 2023, nous célébrons les 30 ans de la création de l’Union Européenne. A cette occasion, Le Puy en Velay a choisi d’organiser un événement exceptionnel, à la hauteur de l'événement. 4 soirées, 12 artistes et groupes venus des 4 coins de l’Europe..
+                    Venez célébrer cet événement unique du 22 au 25 juin 2023, place du Breuil au Puy en Velay. Pour célébrer l'interculturalité de l’événement, les concerts seront retransmis à la télévision, et dans différents pays d’Europe, il sera possible d’y assister en version holographique.
+                </p>
+                <a href="./page_information.php">Voir plus</a>
             </div>
         </div>
     </div>
 
     <div class="container_p2">
         <h1 class="titre_accueil">ARTISTES</h1>
+        <!-- Système qui automatise la liste d'affichage des artistes en appelans les différentes données depuis la BDD -->
         <?php
         echo '<p class="description_nb_artistes">Voici les ' . $nbArt . ' artistes présents pour Eurobands.</p>';
         ?>
@@ -52,14 +56,14 @@ $nbArt = count($tableauArt);
                 '<li>
                     <a href="PageArtistes.php?id=' . $tableauArt[$i]["id_artiste"] . '">
                     <img class="illuArt" src="' . $tableauArt[$i]['url_image_artiste'] . '"></a>
-                    <div class="overlay"><span>' .$tableauArt[$i]['prenom_artiste']. " " . $tableauArt[$i]['nom_artiste'] . '</span></div>
+                    <div class="overlay"><span>' . $tableauArt[$i]['prenom_artiste'] . " " . $tableauArt[$i]['nom_artiste'] . '</span></div>
                  </li>';
             }
             ?>
         </ul>
     </div>
 
-
+    <!-- Appel du footer depuis le fichier footer.php -->
     <footer>
         <?php
         include './footer.php';
