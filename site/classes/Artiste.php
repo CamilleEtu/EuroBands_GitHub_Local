@@ -13,8 +13,7 @@ class Artiste{
     public $urlImg = "";
     public $style; //est de classe Style
 
-    public function __construct($id, $n, $p, $d, $b, $na, $vid, $img, $style){
-        $this->id = $id;
+    public function __construct($n, $p, $d, $b, $na, $vid, $img, $style){
         $this->nom = $n;
         if(isset($p)){
             $this->prenom = $p;

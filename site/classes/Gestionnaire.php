@@ -39,7 +39,9 @@ class Gestionnaire {
         $results->closeCursor();
 
 		for ($i=0; $i < count($this->artistes); $i++) { 
-			$this->artistes[$i] = new Artiste($this->artistes[$i]["id_artiste"],$this->artistes[$i]["nom_artiste"], $this->artistes[$i]["prenom_artiste"], $this->artistes[$i]["date_crea"], $this->artistes[$i]["bio_artiste"], $this->artistes[$i]["nation_artiste"], $this->artistes[$i]["url_video_artiste"], $this->artistes[$i]["url_image_artiste"], NULL);
+			$id = $this->artistes[$i]["id_artiste"];
+			$this->artistes[$i] = new Artiste($this->artistes[$i]["nom_artiste"], $this->artistes[$i]["prenom_artiste"], $this->artistes[$i]["date_crea"], $this->artistes[$i]["bio_artiste"], $this->artistes[$i]["nation_artiste"], $this->artistes[$i]["url_video_artiste"], $this->artistes[$i]["url_image_artiste"], NULL);
+			$this->artistes[$i]->id = $id;
 		}
         $requete='SELECT * FROM festivalier';
         $results = $this->bdd->query($requete);
@@ -91,13 +93,9 @@ class Gestionnaire {
 		$tabidArtiste = $results->fetchAll();
 		$results->closeCursor();
 
-		//Cette requête permet d'obtenir l'id du style qu'on veut associer à l'artiste
-		$requete = "SELECT id_style FROM style WHERE style_artiste='".$style->nomStyle."'";
-		$results = $this->bdd->query($requete);
-		$tabidStyle = $results->fetchAll();
-		$results->closeCursor();
+		$artiste->id = $tabidArtiste[0][0];
 
-		$requete="INSERT INTO lien_artiste_style (id_artiste, id_style) VALUES (".$tabidArtiste[0]["id_artiste"].",".$tabidStyle[0]["id_style"].")";
+		$requete="INSERT INTO lien_artiste_style (id_artiste, id_style) VALUES (".$artiste->id.",".$artiste->style->idStyle.")";
 		$results = $this->bdd->query($requete);
 		$tabInsert = $results->fetchAll();
 		$results->closeCursor();

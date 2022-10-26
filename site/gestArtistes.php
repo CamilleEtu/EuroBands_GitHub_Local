@@ -83,18 +83,35 @@
                         require_once("classes/Gestionnaire.php");
                         session_start();
                         $instance = Gestionnaire::getInstance();
+                        echo "<h1>Modification de ".$_POST["artiste"]."</h1>";
+                        var_dump(count($instance->artistes));
                         for ($i=0; $i < count($instance->artistes); $i++) { 
                             if(strpos($_POST["artiste"], $instance->artistes[$i]->nom) !== false){
                                 var_dump("ITS ALIVE");
+                                echo '<form method="POST" action="gestArtistes.php?ajout=1">';
+                                echo 'Nom : <input type="text" name="nom" required value='.$instance->artistes[$i]->nom.'></br>';
+                                echo 'Prénom (s\'il existe) : <input type="text" name="prenom" value ='.$instance->artistes[$i]->prenom.'></br>';
+                                echo 'Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01" required value='.$instance->artistes[$i]->dateDebut.'></br>';
+
+                                echo 'Description de l\'artiste : <textarea name="bio" required rows="8" cols="33" required>'.$instance->artistes[$i]->bio.'</textarea></br>';
+                                echo 'Pays : <input type="text" name="nation" required value='.$instance->artistes[$i]->nation.'></br>';
+                                echo 'URL d\'une vidéo de l\'artiste : <input type="text" name="video" value='.$instance->artistes[$i]->urlVideo.'></br>';
+                                echo 'IMG de l\'artiste : <input type="text" name="img" value='.$instance->artistes[$i]->urlImg.'></br>';
+                                echo 'Style : <select name="style">';
+                                for ($v=0; $v < count($instance->styles); $v++) { 
+                                    if ($instance->styles->nomStyle == $instance->artistes[$v]->styles->nomStyle) {
+                                        echo "<option selected>".$instance->styles[$v]->nomStyle."</option>";
+                                    }
+                                    else{
+                                    echo "<option>".$instance->styles[$v]->nomStyle."</option>";
+                                    }
+                                }
+                                echo '</select>';
+                                echo '</br></br></br><input type="submit" value="Modifier l\'Artiste">';
+                                echo '<input type="reset" value="recommencer">';
+                                echo '</form>';
                             }
                         }
-/*
-                        for ($i=0; $i < count($instance->styles); $i++) { 
-                            if(strpos($_POST["artiste"], $instance->artistes[$i]->nom) !== false){
-                                var_dump("ITS ALIVE");
-                            }
-                        }*/
-                        echo "<h1>Modification de ".$_POST["artiste"]."</h1>";
                         break;
                     default:
                         break;
