@@ -30,6 +30,9 @@ h3 {
     border: none;
     border-bottom: 2px solid;
 }
+.continuer .co {
+    outline: none;
+}
 .continuer .co:hover {
     background-color: #dedede;
     color: #4f4f4f;
@@ -42,6 +45,7 @@ h3 {
     background-color: #1e1e1e;
     color: #f4f4f4;
     border-radius: 25px;
+    transition: 0.75s;
 }
 .continuer .submit:not(:hover) {
     transition: 0.75s;

@@ -44,10 +44,10 @@
     color: rgb(0, 0, 0);
     background-color: #f4f4f4;
     border-radius: 50px;
-    transition: 1s;
+    transition: 0.75s;
 }
 .container_header > .resa:not(:hover) {
-    transition: 1s;
+    transition: 0.75s;
 }
 
 /* effet soulignement */
@@ -90,6 +90,7 @@
 
 h3 {
     border-bottom: solid 2px #f4f4f4;
+    margin-bottom: 20px;
 }
 
 .container_footer {  
@@ -97,12 +98,51 @@ h3 {
     padding-bottom: 30px;
 }
 
+/* RESEAUX */
 .RS {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 150px;
+}
+.RS > a > img {
+    height: 40px;
+    width: auto;
+}
+.container_footer > .RS > a {
+    text-decoration: none;
+    margin: 20px;
+    padding: 20px;
+}
+.container_footer > .RS > a:hover {
+    transform: scale(1.3);
+    transition: 0.25s;
+}
+.container_footer > .RS > a:not(:hover){
+    transition: 0.25s;
+}
+/* effet soulignement */
+.container_footer > .RS > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2.5px;
+    background: #f4f4f4;
+    transition: width .3s;
+}
 
+.container_footer > .RS > a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+/* fin soulignement */
+
+
+/* NAV FOOTER */
+.container_footer > nav > ul > a, li {
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 20px;
 }
 
 nav {
@@ -117,16 +157,7 @@ nav > ul {
     justify-content: space-around;
 }
 
-.container_footer a, li {
- text-decoration: none;
- list-style: none;
- padding: 5px 30px;
-}
 
-.container_footer > .RS > a:hover {
-    border: solid 2px #f4f4f4;
-    border-radius: 10px;
-}
 
 /* effet soulignement */
 .container_footer > nav > ul > li > ul > a > li::after {
@@ -139,7 +170,7 @@ nav > ul {
 }
 
 .container_footer > nav > ul > li > ul > a > li:hover::after {
-    width: 80%;
+    width: 100%;
     transition: width .3s;
 }
 /* fin soulignement */
