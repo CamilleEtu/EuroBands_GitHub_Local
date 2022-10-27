@@ -1,4 +1,11 @@
 <?php
+// Footer ---------------------------------------------------
+define('header_art', "Artists");
+
+define('header_plus', "See more");
+
+define('header_resa', "Register");
+
 // Page accueil ---------------------------------------------------
 define('car', "carrousel_VA.php");
 

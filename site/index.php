@@ -30,8 +30,8 @@ $nbArt = count($tableauArt);
 
     <?php
     echo "<header>";
-    include './header.php';
     include("lang.php");
+    include './header.php';
     echo "</header>";
     ?>
     <main>
