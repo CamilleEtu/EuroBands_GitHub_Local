@@ -1,7 +1,4 @@
 <?php
-// Global ------------------------------
-
-
 // Page acceuil ---------------------------------------------------
 define('car', "carrousel_V2.php");
 
@@ -58,4 +55,19 @@ define('resa_prix', "Prix : 0€");
 define('resa_valid', "Pré-inscription");
 
 define('resa_effa', "Effacer");
+
+// Footer ---------------------------------------------------
+define('footer_h3', "Plan du site");
+
+define('footer_apropos', "A propos de Eurobands");
+
+define('footer_resa', "Pré-réservation");
+
+define('footer_legal', "Partie légale");
+
+define('footer_mentions', "Mentions légales");
+
+define('footer_cgv', "CGV");
+
+define('footer_coord', "Coordonnées");
 ?>

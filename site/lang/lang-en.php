@@ -1,7 +1,4 @@
 <?php
-// Global ------------------------------
-
-
 // Page accueil ---------------------------------------------------
 define('car', "carrousel_VA.php");
 
@@ -56,4 +53,19 @@ define('resa_prix', "Price : 0€");
 define('resa_valid', "Pre-register");
 
 define('resa_effa', "Clear");
+
+// Footer ---------------------------------------------------
+define('footer_h3', "Site map");
+
+define('footer_apropos', "About Eurobands");
+
+define('footer_resa', "Pre-registering");
+
+define('footer_legal', "Legal section");
+
+define('footer_mentions', "Legal information");
+
+define('footer_cgv', "GTC");
+
+define('footer_coord', "Contact details");
 ?>
