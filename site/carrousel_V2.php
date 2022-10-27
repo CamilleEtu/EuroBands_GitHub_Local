@@ -1,7 +1,8 @@
-<script src="js/carrousel_V2.js"></script>
+<script src="javascript/carrousel_V2.js"></script>
+<link rel="stylesheet" href="./css/style.css">
 
 <section class="image">
-    <button class="fleche" id="g"><img src="images/fleche.png" class="bg"></button>
-    <img id="af" src="images/image5.jpg">
-    <button class="fleche" id="d"><img src="images/fleche.png"></button>
+    <button class="fleche" id="g"><img src="./img/arrow_l.png" class="bg"></button>
+    <img id="af" src="./img/GLOBAL.png">
+    <button class="fleche" id="d"><img src="./img/arrow_r.png"></button>
 </section>

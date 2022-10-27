@@ -36,12 +36,12 @@
     color: #f4f4f4;
     background-color: #003194;
     margin-right: 50px;
+    border-radius: 5px;
 }
 
 .container_header > .resa:hover {
     color: rgb(0, 0, 0);
     background-color: #f4f4f4;
-    border-radius: 50px;
     transition: 0.75s;
 }
 .container_header > .resa:not(:hover) {
@@ -178,18 +178,11 @@ nav > ul {
 }
 
 /*-----------CONTENU--------------*/
-.container_p1 {
-    display: flex;
-    flex-direction: column;
-    padding: 2em;
-    padding-left: 4em;
-    padding-right: 4em;
-}
 
 .titre_accueil {
     display: flex;
     justify-content: center;
-    margin : 15px;
+    margin : 20px;
     text-transform: uppercase;
     font-size: 55px;
     font-family: 'Bebas Neue', cursive;
@@ -217,6 +210,7 @@ nav > ul {
 .container_p1 > div > div > p {
     margin-bottom: 35px;
     padding: 25px;
+    font-size: 18px;
 }
 
 .container_p1 > div > div > a {
@@ -260,16 +254,36 @@ nav > ul {
     font-weight: bold;
   }
 
-
   .container_p1 {
     display: flex;
     flex-direction: column;
     padding: 20px;
     padding-left: 4em;
     padding-right: 4em;
+    justify-content: center;
 }
 
 .description_nb_artistes {
     text-align: center;
     padding: 1em;
+}
+
+#af {
+    width: 80%;
+    height: auto;
+}
+.container_p1 > div {
+    display: flex;
+}
+
+.carrousel {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
 }

@@ -20,28 +20,37 @@ $nbArt = count($tableauArt);
     <meta type="keywords" content="eurobands, festival, music, international">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>EuroBands</title>
 </head>
 
 <body>
+    <!-- Appel du header depuis le fichier header.php -->
     <header>
         <?php
         include './header.php';
+        include("lang.php");
         ?>
     </header>
 
+    <div class="carrousel">
+            <?php
+            include "./carrousel_V2.php"
+            ?>
+    </div>
+
     <div class="container_p1">
-        <h1 class="titre_accueil">Bienvenue à Eurobands</h1>
         <div>
             <img src="./img/Angele.png">
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat ligula eu commodo consequat. Proin convallis accumsan libero, vitae sagittis ligula dictum pellentesque. Nam at lorem nec odio consectetur cursus. Proin eu pharetra ipsum, bibendum dapibus urna. Proin tempus massa bibendum mauris consectetur, eu viverra nibh pellentesque.</p>
-                <a href="#">Voir plus</a>
+                <?php echo texte_acc; ?>
+                <a href="./page_information.php">Voir plus</a>
             </div>
         </div>
     </div>
 
     <div class="container_p2">
         <h1 class="titre_accueil">ARTISTES</h1>
+        <!-- Système qui automatise la liste d'affichage des artistes en appelans les différentes données depuis la BDD -->
         <?php
         echo '<p class="description_nb_artistes">Voici les ' . $nbArt . ' artistes présents pour Eurobands.</p>';
         ?>
@@ -52,14 +61,14 @@ $nbArt = count($tableauArt);
                 '<li>
                     <a href="PageArtistes.php?id=' . $tableauArt[$i]["id_artiste"] . '">
                     <img class="illuArt" src="' . $tableauArt[$i]['url_image_artiste'] . '"></a>
-                    <div class="overlay"><span>' .$tableauArt[$i]['prenom_artiste']. " " . $tableauArt[$i]['nom_artiste'] . '</span></div>
+                    <div class="overlay"><span>' . $tableauArt[$i]['prenom_artiste'] . " " . $tableauArt[$i]['nom_artiste'] . '</span></div>
                  </li>';
             }
             ?>
         </ul>
     </div>
 
-
+    <!-- Appel du footer depuis le fichier footer.php -->
     <footer>
         <?php
         include './footer.php';
