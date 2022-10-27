@@ -15,22 +15,23 @@
                     <a href=""><img src="img/twitter.png"></a>
                     <a href=""><img src="img/youtube.png"></a>
                 </div>
+                
                 <nav>
                     <ul>
                         <a href=""><li><img class="logo2" src="img/logo_small.png"></li></a>
-                        <li><h3>Plan du site</h3>
+                        <li><h3><?php echo footer_h3; ?></h3>
                             <ul>
-                                <a href=""><li>A propos de EuroBands</li></a>
-                                <a href=""><li>Réservation</li></a>
+                                <a href=""><li><?php echo footer_apropos; ?></li></a>
+                                <a href=""><li><?php echo footer_resa; ?></li></a>
                             </ul>
                         </li>
-                        <li><h3>Partie légale</h3>
+                        <li><h3><?php echo footer_legal; ?></h3>
                             <ul>
-                                <a href=""><li>Mentions légales</li></a>
-                                <a href=""><li>CGV</li></a>
+                                <a href=""><li><?php echo footer_mentions; ?></li></a>
+                                <a href=""><li><?php echo footer_cgv; ?></li></a>
                             </ul>
                         </li>
-                        <li><h3>Coordonnées</h3>
+                        <li><h3><?php echo footer_coord; ?></h3>
                             <p>&emsp;Place du Breuil</p>
                             <p>&emsp;43 000 Le Puy En Velay</p>
                             <p>&emsp;eurobands@mail.com</p>
