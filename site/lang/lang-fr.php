@@ -1,10 +1,10 @@
 <?php
 // Footer ---------------------------------------------------
-define('header_art', "Artistes");
+define("header_art", "Artistes");
 
-define('header_plus', "En savoir plus");
+define("header_plus", "En savoir plus");
 
-define('header_resa', "Réserver");
+define("header_resa", "Réserver");
 
 // Page acceuil ---------------------------------------------------
 

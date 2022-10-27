@@ -12,10 +12,10 @@
 
 <body>
     <header>
-        <?php
-        include './header.php';
-        include("lang.php");
-        ?>
+    <?php
+    include("lang.php");
+    include './header.php';
+    ?>
     </header>
     <div class="container_reserv">
         <h1 class="titre_accueil"><?php echo resa_titre1; ?></h1>
