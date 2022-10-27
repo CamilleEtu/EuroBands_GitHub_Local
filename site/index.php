@@ -36,9 +36,7 @@ $nbArt = count($tableauArt);
     ?>
     <main>
 
-        <?php
-        include "./carrousel.php";
-        ?>
+        <?php require_once(index_car); ?>
 
 
         <div class="container_p1">

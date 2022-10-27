@@ -7,6 +7,7 @@ define('header_plus', "See more");
 define('header_resa', "Register");
 
 // Page accueil ---------------------------------------------------
+define('index_car', "carrouselEn.php");
 
 define('index_titre2', "Artists");
 
