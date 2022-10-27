@@ -1,10 +1,10 @@
 <!-- Swiper -->
 <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./img/GLOBAL txt FR.png"></div>
-                <div class="swiper-slide"><img src="./img/ELECTRO POP txt FR.png"></div>
                 <div class="swiper-slide"><img src="./img/ELECTRO RAP txt FR.png"></div>
+                <div class="swiper-slide"><img src="./img/ELECTRO POP txt FR.png"></div>
                 <div class="swiper-slide"><img src="./img/POP ROCK txt FR.png"></div>
+                <div class="swiper-slide"><img src="./img/GLOBAL txt FR.png"></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
