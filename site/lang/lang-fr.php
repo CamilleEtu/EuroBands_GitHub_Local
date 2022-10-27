@@ -7,7 +7,6 @@ define('header_plus', "En savoir plus");
 define('header_resa', "Réserver");
 
 // Page acceuil ---------------------------------------------------
-define('car', "carrousel_V2.php");
 
 define('index_titre2', "Artistes");
 
@@ -27,7 +26,7 @@ define('info_p2', "Venez en profiter en famille, entre amis, pour 1 jour ou plus
 Pour les personnes ne pouvant pas être sur place, une rediffusion sera faite sur France2, et sur les chaînes nationales des autres pays participants.<br>
 Fait exceptionnel : certains pays rediffuseront l’événement sur scène, avec des hologrammes, pour faire vivre l’événement en temps réel aux spectateurs éloignés.");
 
-define('info_carte', '<img src="img/carteFr.png">');
+define('info_carte', 'src="img/carteFr.png"');
 
 define('info_p3', "Texte Quentin");
 

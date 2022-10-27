@@ -34,7 +34,7 @@
                 <div>
                    <p> <?php echo info_p3; ?> </p>
                 </div>
-                <?php echo info_carte; ?>
+                <img <?php echo info_carte; ?>>
             </div>
         </div>
 

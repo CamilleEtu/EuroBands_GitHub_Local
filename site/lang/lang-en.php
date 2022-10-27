@@ -7,7 +7,6 @@ define('header_plus', "See more");
 define('header_resa', "Register");
 
 // Page accueil ---------------------------------------------------
-define('car', "carrousel_VA.php");
 
 define('index_titre2', "Artists");
 
@@ -24,7 +23,7 @@ define('info_p1', 'EuroBands is an event promoting a cultural mix and good Europ
 
 define('info_p2', 'Come enjoy it with family, friends, for 1 day or more. For those who cannot be there, a replay will be made on France2, and on the national channels of the other participating countries. Exceptional fact: some countries will rebroadcast the event on stage, with holograms, to make the event live in real time to distant spectators.');
 
-define('info_carte', '<img src="img/carteAn.png">');
+define('info_carte', 'src="img/carteAn.png"');
 
 define('info_p3', "text Quentin");
 
