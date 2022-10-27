@@ -65,29 +65,36 @@
                             ?>
                         </select>
 
-                    </br></br><input type="submit" value="Ajouter l'artiste">
-                    <input type="reset" value="recommencer">
+                    </br></br><div><input type="submit" value="Ajouter l'artiste" class="Ajout">
+                    <input type="reset" value="recommencer" class="Recom"></div>
                     </form>
                 </div>
+                
 
-                <?php
-                        break;
-                    case 2:
-                        
-                        echo '<h1>Modification d\'artistes</h1>';
-                        require_once("classes/Gestionnaire.php");
-                        session_start();
-                        $instance = Gestionnaire::getInstance();
+                
+                    <?php
+                            break;
+                        case 2:
+                            
+                            echo '<div class="Modif"><h1>Modification d\'artistes</h1>';
+                            require_once("classes/Gestionnaire.php");
+                            session_start();
+                            $instance = Gestionnaire::getInstance();
 
-                        //affiche un select pour que l'utilisateur choisisse l'artiste qu'il veut modifier'
-                        echo "<form action='gestArtistes.php?choix=4' method='POST'><select name='artiste'>";
-                        for ($i=0; $i < count($instance->artistes); $i++) { 
-                            //on affiche le nom, prénom si existant de l'artiste et la nationnalité pour chaque option
-                            echo "<option>".$instance->artistes[$i]->prenom." ".$instance->artistes[$i]->nom." (".$instance->artistes[$i]->nation.")</option>";
-                        }
-                        echo "</select></br></br>";
-                        ?>
-                <input type="submit" value="Modifier l'artiste">
+                            //affiche un select pour que l'utilisateur choisisse l'artiste qu'il veut modifier'
+                            echo "<form action='gestArtistes.php?choix=4' method='POST'><select name='artiste'>";
+                            for ($i=0; $i < count($instance->artistes); $i++) { 
+                                //on affiche le nom, prénom si existant de l'artiste et la nationnalité pour chaque option
+                                echo "<option>".$instance->artistes[$i]->prenom." ".$instance->artistes[$i]->nom." (".$instance->artistes[$i]->nation.")</option>";
+                            }
+                            echo "</select></br></br>";
+                            echo "<input type='submit' value='Modifier l'artiste'></div>";
+                    ?>
+
+                    
+                
+
+
                 </form>
                         <?php
                         break;
