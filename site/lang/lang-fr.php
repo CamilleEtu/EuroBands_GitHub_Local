@@ -7,6 +7,7 @@ define("header_plus", "En savoir plus");
 define("header_resa", "Réserver");
 
 // Page acceuil ---------------------------------------------------
+define('index_car', "carrouselFr.php");
 
 define('index_titre2', "Artistes");
 
@@ -28,7 +29,36 @@ Fait exceptionnel : certains pays rediffuseront l’événement sur scène, avec
 
 define('info_carte', 'src="img/carteFr.png"');
 
-define('info_p3', "Texte Quentin");
+define('info_p3', "Retrouvez ci-dessous la liste des pays diffusant le spectacle en version holographique :");
+
+define('info_liste1', "France : Le Puy-en-Velay, concert original</br>
+Portugal : Lisbonne</br>
+Espagne : Madrid</br>
+Irlande: Dublin</br>
+Pays-Bas: Amsterdam</br>
+Belgique: Bruxelles</br>
+Luxembourg: Luxembourg</br>
+Italie: Milan</br>
+Allemagne: Berlin</br>
+Autriche: Vienne</br>
+Hongrie: Budapest</br>
+Croatie: Zagreb</br>
+République Tchèque: Prague</br>");
+
+define('info_liste2', "Slovénie: Ljubljana</br>
+Slovaquie: Bratislava</br>
+Grèce: Athènes</br>
+Malte: La Valette</br>
+Chypre: Ayia Napa </br>
+Suède: Stockholm</br>
+Finlande: Helsinki</br>
+Danemark: Copenhague</br>
+Roumanie: Bucarest</br>
+Lettonie: Riga</br>
+Bulgarie: Plovdiv</br>
+Estonie: Tallinn</br>
+Lituanie: Klaipeda</br>
+Pologne : Varsovie</br> ");
 
 define('info_titre2', "Fonctionnement « fantôme de pepper » ou Pepper ghost");
 

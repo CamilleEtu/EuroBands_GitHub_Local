@@ -1,8 +1,14 @@
 <!-- Connextion à la base de donnée -->
 
 <?php
-$bdd = new PDO('mysql:host=localhost;port=3306;dbname=eurobands', 'root', '');
+/*les paramètres ci-dessous permettent d'utiliser la base de données en ligne*/
+$hote='mysql-eurobands.alwaysdata.net';
+$utilisateur='eurobands'; //login projet
+$mdp='eurobandsMDP123'; //mdp du projet
+$port=3306; //port 
+$nombase='eurobands_eurobands'; //nom de la base de données
 
+$bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
 $requete = 'SELECT * FROM artiste';
 $resultats = $bdd->query($requete);
 $tableauArt = $resultats->fetchAll();
@@ -36,7 +42,9 @@ $nbArt = count($tableauArt);
     ?>
     <main>
 
-        <?php require_once(index_car); ?>
+        <?php
+        include "./carrousel.php";
+        ?>
 
 
         <div class="container_p1">

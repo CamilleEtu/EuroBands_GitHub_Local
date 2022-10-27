@@ -33,6 +33,10 @@
             <div>
                 <div>
                    <p> <?php echo info_p3; ?> </p>
+                   <div class="texte_carte">
+                        <p><?php echo info_liste1; ?></p>
+                        <p><?php echo info_liste2; ?></p>
+                    </div>
                 </div>
                 <img class="carte" <?php echo info_carte; ?> >
             </div>

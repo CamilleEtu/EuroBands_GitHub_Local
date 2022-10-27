@@ -7,6 +7,7 @@ define('header_plus', "See more");
 define('header_resa', "Register");
 
 // Page accueil ---------------------------------------------------
+define('index_car', "carrouselEn.php");
 
 define('index_titre2', "Artists");
 
@@ -25,7 +26,7 @@ define('info_p2', 'Come enjoy it with family, friends, for 1 day or more. For th
 
 define('info_carte', 'src="img/carteAn.png"');
 
-define('info_p3', "text Quentin");
+define('info_p3', "Find below the list of countries broadcasting the show in holographic version:");
 
 define('info_titre2', 'Operating of the Pepper ghost or « fantôme de pepper »');
 
