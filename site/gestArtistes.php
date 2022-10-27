@@ -3,16 +3,28 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Aurobands admin gestion artistes</title>
-    <!--     <link type="text/css" rel="stylesheet" id="stylesheet" media="screen" href="css/styleDark.css" title="design"/> -->
+        <title>EuroBands admin gestion artistes</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
             <!-- FAVICON -->
     <!--     <link rel="shortcut icon" type="image/x-icon" href="images/crown.png" /> -->
     </head>
     <body>
+
+    <?php
+    echo "<header>";
+    include './header.php';
+    include("lang.php");
+    echo "</header>";
+    ?>
+
+    <main>
+
         <?php
         if (isset($_COOKIE["admin"])) {
             if (!isset($_GET["choix"])) {
-                ?>
+        ?>
                         <h1>Que voulez-vous faire ?</h1>
             <a href="gestArtistes.php?choix=1"><input type="button" value="Ajouter un nouvel artiste"></a>
             <a href="gestArtistes.php?choix=2"><input type="button" value="Modifier un artiste existant"></a>
@@ -178,5 +190,7 @@
             echo "<h1>Vous n'avez pas les droits pour accéder à cette page</h1>";
         }
             ?>
+    </main>
+
     </body>
 </html>
