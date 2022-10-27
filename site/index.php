@@ -33,9 +33,7 @@ $nbArt = count($tableauArt);
     </header>
 
     <div class="carrousel">
-            <?php
-            include "./carrousel_V2.php"
-            ?>
+            <?php echo car; ?>
     </div>
 
     <div class="container_p1">
