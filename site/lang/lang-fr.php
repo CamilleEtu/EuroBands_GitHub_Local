@@ -23,9 +23,15 @@ define('info_p2', "Venez en profiter en famille, entre amis, pour 1 jour ou plus
 Pour les personnes ne pouvant pas être sur place, une rediffusion sera faite sur France2, et sur les chaînes nationales des autres pays participants.<br>
 Fait exceptionnel : certains pays rediffuseront l’événement sur scène, avec des hologrammes, pour faire vivre l’événement en temps réel aux spectateurs éloignés.");
 
+define('info_carte', '<img src="img/carteFr.png">');
+
+define('info_p3', "Texte Quentin");
+
 define('info_titre2', "Fonctionnement « fantôme de pepper » ou Pepper ghost");
 
-define('info_p3', "Le concert est filmé en temps réel, puis rediffusé soit en direct sur les chaînes de télévision, soit avec le concept du « Pepper Ghost », en français « Fantôme de Pepper ». Pour mettre en place ce concept, il faut installer un vidéoprojecteur sur un support en hauteur, sur l’avant de la scène. Celui-ci projette la vidéo en direct (ou pas) sur un miroir, placé juste devant la lentille, et incliné vers le sol. Au sol, entre la scène et le public, mais dissimulé à la vue de celui-ci, se trouve un autre miroir. Il  réceptionne  l’image  du  premier  miroir  et  la  renvoie,  cette  fois  ci  sur  un  grand  plexiglass, incliné, partant du bord de la scène jusqu’à la barre supportant le vidéoprojecteur. Ce renvoi de l’image sur le plan incliné du plexiglass fait que le spectateur perçoit la scène (ici le concert) comme s’il était sur scène devant lui. Pour mieux comprendre le concept, voici une vidéo explicative.");
+define('info_p4', "Le concert est filmé en temps réel, puis rediffusé soit en direct sur les chaînes de télévision, soit avec le concept du « Pepper Ghost », en français « Fantôme de Pepper ». Pour mettre en place ce concept, il faut installer un vidéoprojecteur sur un support en hauteur, sur l’avant de la scène. Celui-ci projette la vidéo en direct (ou pas) sur un miroir, placé juste devant la lentille, et incliné vers le sol.");
+
+define('info_p5', "Au sol, entre la scène et le public, mais dissimulé à la vue de celui-ci, se trouve un autre miroir. Il  réceptionne  l’image  du  premier  miroir  et  la  renvoie,  cette  fois  ci  sur  un  grand  plexiglass, incliné, partant du bord de la scène jusqu’à la barre supportant le vidéoprojecteur. Ce renvoi de l’image sur le plan incliné du plexiglass fait que le spectateur perçoit la scène (ici le concert) comme s’il était sur scène devant lui. Pour mieux comprendre le concept, voici une vidéo explicative.");
 
 define('info_titre3', "Vidéo d'explication");
 

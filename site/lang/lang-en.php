@@ -20,9 +20,16 @@ define('info_p1', 'EuroBands is an event promoting a cultural mix and good Europ
 
 define('info_p2', 'Come enjoy it with family, friends, for 1 day or more. For those who cannot be there, a replay will be made on France2, and on the national channels of the other participating countries. Exceptional fact: some countries will rebroadcast the event on stage, with holograms, to make the event live in real time to distant spectators.');
 
+define('info_carte', '<img src="img/carteAn.png">');
+
+define('info_p3', "text Quentin");
+
 define('info_titre2', 'Operating of the Pepper ghost or « fantôme de pepper »');
 
-define('info_p3', 'The concert is filmed in real time, then broadcasted either live on television channels, or with the concept of «Pepper Ghost», in French «Fantôme de Pepper». To implement this concept, a video projector must be installed on a stand at the top of the stage. It projects the video live (or not) on a mirror, placed just in front of the lens, and tilted towards the ground. On the ground, between the stage and the audience, but hidden from view, is another mirror. It receives the image of the first mirror and sends it back, this time on a large plexiglass, tilted, fixed to the edge of the stage up to the bar supporting the projector. This  projection  of  the  image  on  the  inclined  plane  of  the  plexiglass  makes  the  spectator perceive the stage (here the concert) as if he were happening in front of him. To better understand the concept, here is an explanatory video.');
+
+define('info_p4', 'The concert is filmed in real time, then broadcasted either live on television channels, or with the concept of «Pepper Ghost», in French «Fantôme de Pepper». To implement this concept, a video projector must be installed on a stand at the top of the stage. It projects the video live (or not) on a mirror, placed just in front of the lens, and tilted towards the ground. ');
+
+define('info_p5', "On the ground, between the stage and the audience, but hidden from view, is another mirror. It receives the image of the first mirror and sends it back, this time on a large plexiglass, tilted, fixed to the edge of the stage up to the bar supporting the projector. This  projection  of  the  image  on  the  inclined  plane  of  the  plexiglass  makes  the  spectator perceive the stage (here the concert) as if he were happening in front of him. To better understand the concept, here is an explanatory video.");
 
 define('info_titre3', 'Explanatory video');
 
