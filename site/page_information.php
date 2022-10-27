@@ -21,7 +21,7 @@
         <div class="container_info">
             <h1 class="titre_accueil"> <?php echo info_titre; ?></h1>
             <div>
-                <img src="./img/LogoCouleurPetit.png">
+                <img class="logo_couleur" src="./img/LogoCouleurPetit.png">
                 <div>
                     <p> <?php echo info_p1; ?> </p>
                     <p> <?php echo info_p2; ?> </p>
@@ -42,7 +42,7 @@
 
         <div class="container_info">
             <div>
-                <img src="./img/Materiel-Hologramme.png">
+                <img classe="materiel_hologramme" src="./img/Materiel-Hologramme.png">
                 <div>
                     <p> <?php echo info_p4 ; ?> </p>
                 </div>
@@ -54,14 +54,14 @@
                 <div>
                    <p> <?php echo info_p5; ?> </p>
                 </div>
-                <img src="./img/Chemin-De-La-Personne.png">
+                <img class="chemin_personne" src="./img/Chemin-De-La-Personne.png">
             </div>
         </div>
 
         <div class="container_info">
         <h2 class="titre_accueil"> <?php echo info_titre3; ?> </h1>
                 <div class="video_1">
-                    <iframe width="853" height="480" src="https://www.youtube.com/embed/71vdr1vUy08" title="Principe de fonctionnement des hologrammes." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/71vdr1vUy08" title="Principe de fonctionnement des hologrammes." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
         </div>
     </div>

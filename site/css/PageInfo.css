@@ -9,7 +9,7 @@
 .container_info > div {
     display: flex;
     align-items: center;
-    flex-wrap: row;
+    flex-direction: row;
 }
 
 .container_info > div > img {
@@ -46,4 +46,42 @@
 .video_1 {
     display: flex;
     justify-content: center;
+}
+
+.container_info > div > iframe {
+    width: 853px;
+    height: 480px;
+}
+
+@media (max-width: 1180px) {
+    .container_info > div{
+        flex-direction: column;
+    }
+
+    .container_info > div > div {
+        text-align: center;
+    }
+
+    .container_info > div > iframe {
+        width: 100vw;
+        height: 480px;
+    }
+
+    .container_info > div > div > p {
+        padding: 0px;
+    }
+
+    .container_info_g {
+        padding: 0px;
+    }
+
+    .logo_couleur {
+        height: 150px;
+        width: auto;
+    }
+
+    .container_info > div > img:nth-child(2) {
+        height: 300px;
+        width: auto;
+    }
 }
