@@ -36,7 +36,6 @@ $nbArt = count($tableauArt);
     <div><?php require_once(car); ?> </div>
     <div class="container_p1">
         <div>
-            <img src="./img/Angele.png">
             <div>
                 <p> <?php echo index_p1; ?> </p>
                 <a href="./page_information.php"> <?php echo index_more;?></a>
