@@ -7,6 +7,7 @@ define("header_plus", "En savoir plus");
 define("header_resa", "Réserver");
 
 // Page acceuil ---------------------------------------------------
+define('index_car', "carrouselFr.php");
 
 define('index_titre2', "Artistes");
 
