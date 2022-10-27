@@ -24,17 +24,16 @@
                 <img src="./img/Angele.png">
                 <div>
                     <p> <?php echo info_p1; ?> </p>
-                    <p> <?php echo info_p2; ?> </p>
                 </div>
             </div>
         </div>
 
         <div class="container_info">
             <div>
-                <?php echo info_carte; ?>
-            </div>
-            <div>
-                <p> <?php echo info_p3; ?> </p>
+                <div>
+                   <p> <?php echo info_p2; ?> </p>
+                </div>
+                <img src="./img/Angele.png">
             </div>
         </div>
 
@@ -42,19 +41,10 @@
 
         <div class="container_info">
             <div>
-                <img src="./img/Materiel-Hologramme.png">
+                <img src="./img/Angele.png">
                 <div>
-                    <p> <?php echo info_p4 ; ?> </p>
+                    <p> <?php echo info_p3 ; ?> </p>
                 </div>
-            </div>
-        </div>
-
-        <div class="container_info">
-            <div>
-                <div>
-                   <p> <?php echo info_p5; ?> </p>
-                </div>
-                <img src="./img/Chemin-De-La-Personne.png">
             </div>
         </div>
 
