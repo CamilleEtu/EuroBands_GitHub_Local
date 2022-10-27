@@ -76,12 +76,12 @@
     }
 
     .logo_couleur {
-        height: 150px;
+        height: 100px;
         width: auto;
     }
 
-    .container_info > div > img:nth-child(2) {
-        height: 300px;
+    .carte {
+        height: 1000px;
         width: auto;
     }
 }

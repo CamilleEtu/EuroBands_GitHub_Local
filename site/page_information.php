@@ -34,7 +34,7 @@
                 <div>
                    <p> <?php echo info_p3; ?> </p>
                 </div>
-                <img <?php echo info_carte; ?>>
+                <img class="carte" <?php echo info_carte; ?> >
             </div>
         </div>
 
@@ -42,7 +42,7 @@
 
         <div class="container_info">
             <div>
-                <img classe="materiel_hologramme" src="./img/Materiel-Hologramme.png">
+                <img class="materiel_hologramme" src="./img/Materiel-Hologramme.png">
                 <div>
                     <p> <?php echo info_p4 ; ?> </p>
                 </div>

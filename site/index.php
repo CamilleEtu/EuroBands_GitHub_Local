@@ -41,7 +41,6 @@ $nbArt = count($tableauArt);
         ?>
 
 
-
         <div class="container_p1">
             <div>
                 <div>
