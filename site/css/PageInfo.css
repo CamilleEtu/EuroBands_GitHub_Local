@@ -43,6 +43,11 @@
     font-size: 18px;
 }
 
+.texte_carte {
+    display: flex;
+    gap: 30px;
+}
+
 .video_1 {
     display: flex;
     justify-content: center;
@@ -78,6 +83,11 @@
     .logo_couleur {
         height: 100px;
         width: auto;
+    }
+
+    .texte_carte {
+        display: flex;
+        flex-direction: column;
     }
 
     .carte {
