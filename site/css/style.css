@@ -8,11 +8,18 @@
 }
 
 /*-----------HEADER---------------*/
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+}
 .container_header {
     background-color: #1e1e1e;
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 200px;
+    opacity: 90%;
+    transition: 0.4s;
 }
 
 .container_header a, li {
@@ -29,13 +36,14 @@
 .container_header .navbar > ul > li{
     display: flex;
     justify-content: stretch;
+    padding-top: 30px;
 }
 
 
 .container_header > .resa {
     color: #f4f4f4;
     background-color: #003194;
-    margin-right: 50px;
+    margin-right: 10px;
     border-radius: 5px;
 }
 
@@ -67,14 +75,22 @@
 
 
 .logo1 {
-    width: 170px;
+    width: 250px;
     height: auto;
     margin: 15px;
+    padding-left: 60px;
+    transition: 0.4s;
 }
 .logo1:hover{
     opacity: 75%;
     transition: 0.5s;
 }
+
+
+.lgFR {
+    padding-right: 70px;
+}
+
 
 /*------------FOOTER--------------*/
 .logo2 {
