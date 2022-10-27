@@ -30,7 +30,7 @@
         </div>
 
         <div class="container_info">
-            <div>
+            <div class="bloc_carte">
                 <div>
                    <p> <?php echo info_p3; ?> </p>
                    <div class="texte_carte">
