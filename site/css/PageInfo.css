@@ -12,13 +12,6 @@
     flex-direction: row;
 }
 
-.container_info > div > img {
-    height: 365px;
-    width: auto;
-    margin: 20px;
-    border-radius: 25px;
-}
-
 .container_info > div > div {
     display: flex;
     align-items: center;
@@ -58,6 +51,44 @@
     height: 480px;
 }
 
+.logo_couleur {
+    height: 265px;
+    width: auto;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.carte {
+    height: 350px;
+    width: auto;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.carte:hover {
+    height: 550px;
+    transition: .3s;
+    text-align: center;
+}
+
+.carte:not(hover) {
+    transition: .3s;
+}
+
+.materiel_hologramme {
+    height: 500px;
+    width: auto;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.chemin_personne {
+    height: 500px;
+    width: auto;
+    margin: 20px;
+    border-radius: 25px;
+}
+
 @media (max-width: 1180px) {
     .container_info > div{
         flex-direction: column;
@@ -78,11 +109,11 @@
 
     .container_info_g {
         padding: 0px;
+ 
     }
 
     .logo_couleur {
-        height: 100px;
-        width: auto;
+        height: 150px;
     }
 
     .texte_carte {
@@ -91,7 +122,14 @@
     }
 
     .carte {
-        height: 1000px;
-        width: auto;
+        height: 70vh;
+    }
+
+    .materiel_hologramme {
+        height: 60vh;
+    }
+
+    .chemin_personne {
+        height: 60vh;
     }
 }
