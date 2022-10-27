@@ -47,9 +47,7 @@ $nbArt = count($tableauArt);
     <div class="container_p2">
         <h1 class="titre_accueil"><?php echo index_titre2; ?></h1>
         <!-- Système qui automatise la liste d'affichage des artistes en appelans les différentes données depuis la BDD -->
-        <?php
-        echo "<p class='description_nb_artistes'> Nombre dartistes présent pour EuroBands : " . $nbArt . "</p>";
-        ?>
+        <p class='description_nb_artistes'><?php echo index_nombre_artiste;?> <?php echo $nbArt ?> </p>
         <ul id="artistes" class="image-gallery">
             <?php
             for ($i = 0; $i < $nbArt; $i++) {

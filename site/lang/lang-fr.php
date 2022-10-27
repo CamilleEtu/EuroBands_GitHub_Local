@@ -5,6 +5,9 @@ define('index_p1', 'En 2023, nous célébrons les 30 ans de la création de l’
 Venez célébrer cet événement unique du 22 au 25 juin 2023, place du Breuil au Puy en Velay. Pour célébrer l\'interculturalité de l’événement, les concerts seront retransmis  à la télévision, et dans différents pays d’Europe, il sera possible d’y assister en version holographique.</br> 
 ');
 define("index_more", "Voir Plus");
+define("index_nombre_artiste", "Nombre dartistes présent pour EuroBands : ");
+
+
 define('info_titre', "à propos d'eurobands");
 define('info_p1', "EuroBands est un événement prônant le mélange culturel et la bonne entente européenne. A l’occasion des 30 ans de la création du l’Union Européenne (du traité de Maastricht), différents artistes des pays de l’UE se rassemblent au Puy-En-Velay, capitale française de la lentille, pour un concert exceptionnel. 4 jours de concerts, 12 artistes et groupes venant chacun d’un pays différent.");
 define('info_p2', "Venez en profiter en famille, entre amis, pour 1 jour ou plus.
