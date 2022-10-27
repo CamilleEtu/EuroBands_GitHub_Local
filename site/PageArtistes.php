@@ -24,6 +24,7 @@ $nbArt = count($tableauArt);
 <body>
     <header>
         <?php
+        include("lang.php");
         include './header.php';
         ?>
     </header>
