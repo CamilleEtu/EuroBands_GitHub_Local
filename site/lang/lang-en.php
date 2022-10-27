@@ -28,6 +28,35 @@ define('info_carte', 'src="img/carteAn.png"');
 
 define('info_p3', "Find below the list of countries broadcasting the show in holographic version:");
 
+define('info_liste1', "France : Le Puy-en-Velay, concert original</br>
+Portugal : Lisbonne</br>
+Espagne : Madrid</br>
+Irlande: Dublin</br>
+Pays-Bas: Amsterdam</br>
+Belgique: Bruxelles</br>
+Luxembourg: Luxembourg</br>
+Italie: Milan</br>
+Allemagne: Berlin</br>
+Autriche: Vienne</br>
+Hongrie: Budapest</br>
+Croatie: Zagreb</br>
+République Tchèque: Prague</br>");
+
+define('info_liste2', "Slovénie: Ljubljana</br>
+Slovaquie: Bratislava</br>
+Grèce: Athènes</br>
+Malte: La Valette</br>
+Chypre: Ayia Napa </br>
+Suède: Stockholm</br>
+Finlande: Helsinki</br>
+Danemark: Copenhague</br>
+Roumanie: Bucarest</br>
+Lettonie: Riga</br>
+Bulgarie: Plovdiv</br>
+Estonie: Tallinn</br>
+Lituanie: Klaipeda</br>
+Pologne : Varsovie</br> ");
+
 define('info_titre2', 'Operating of the Pepper ghost or « fantôme de pepper »');
 
 
