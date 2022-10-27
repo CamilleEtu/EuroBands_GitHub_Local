@@ -14,10 +14,11 @@
     <header>
         <?php
         include './header.php';
+        include("lang.php");
         ?>
     </header>
     <div class="container_reserv">
-        <h1 class="titre_accueil">Réservation gratuite</h1>
+        <h1 class="titre_accueil"><?php echo resa_titre1; ?></h1>
         <div>
             <div>
                 <?php
@@ -79,24 +80,25 @@
                 if (!isset($_GET["ajout"])) {
                 ?>
                     <div class="formulaire">
-                        <h2>Formulaire de pré-inscription</h2>
+                        <h2><?php echo resa_titre2; ?></h2>
                         <form action="form_festi.php?ajout=1" method="POST" class="form_festi">
                             <div>
-                                <label for="nom">Entrez votre Nom : </label>
-                                <input class="input_reserv" type="text" name="nom" id="nom" placeholder="Nom" required>
+                                <label for="nom"><?php echo resa_nom; ?></label>
+                                <input class="input_reserv" type="text" name="nom" id="nom" placeholder=<?php echo resa_Nom; ?> required>
                             </div>
                             <div>
-                                <label for="prenom">Entrez votre Prénom : </label>
-                                <input class="input_reserv" type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+                                <label for="prenom"><?php echo resa_prenom; ?></label>
+                                <input class="input_reserv" type="text" name="prenom" id="prenom" placeholder=<?php echo resa_Prenom; ?> required>
                             </div>
                             <div>
-                                <label for="mail">Entrez votre adresse email : </label>
-                                <input class="input_reserv" type="email" name="mail" id="mail" placeholder="Email" required>
+                                <label for="mail"><?php echo resa_mail; ?></label>
+                                <input class="input_reserv" type="email" name="mail" id="mail" placeholder=<?php echo resa_Email; ?> required>
                             </div>
 
                             <div>
-                                Vous souhaitez vous pré-inscrire pour :</br>
+                                
                                 <?php
+                                echo resa_jour;
 
                                 for ($i = 0; $i < $nbJour; $i++) {
                                     $date = date('l', strtotime($tabJour[$i]['date']));
@@ -107,8 +109,8 @@
                                 ?>
                             </div>
                             <div>
-                                <input class="bouton_reserv" type="submit" value="Se pré-inscrire">
-                                <input class="bouton_reserv" type="reset" value="Effacer">
+                                <input class="bouton_reserv" type="submit" value=<?php echo resa_valid; ?>>
+                                <input class="bouton_reserv" type="reset" value=<?php echo resa_effa; ?>>
                             </div>
                         </form>
                     </div>
@@ -127,8 +129,8 @@
 
             </div>
             <div class="resume">
-                <h2>TOTAL (à payer sur place)</h2>
-                <p>Prix : 0€</p>
+                <h2><?php echo resa_total; ?></h2>
+                <p><?php echo resa_prix; ?></p>
             </div>
         </div>
     </div>
