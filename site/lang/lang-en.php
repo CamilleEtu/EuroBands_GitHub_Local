@@ -1,9 +1,12 @@
 <?php
-define('car', require_once "carrousel_VA.php");
+define('car', "carrousel_VA.php");
 define('index_titre2', "Artists");
 define('index_p1', 'In 2023, we celebrate the 30th anniversary of the creation of the European Union. On this occasion, Le Puy en Velay has chosen to organize an exceptional event, equal to the occasion. 4 evenings, 12 artists and groups from all over Europe.. 
 Come celebrate this unique event from June 22 to 25, 2023, Place du Breuil in Puy en Velay. To celebrate the interculturality of the event, the concerts will be broadcasted on television, and in some European countries, it will be possible to attend in holographic version.</br> 
 ');
+define("index_more", "See More");
+
+
 define('info_titre', 'About Eurobands');
 define('info_p1', 'EuroBands is an event promoting a cultural mix and good European understanding. On the 30th anniversary of the creation of the European Union (of the Maastricht Treaty), various artists from EU countries gather in Puy-En-Velay, the French capital of the lentil, for an exceptional concert. 4 days of concerts, 12 artists and bands from different countries.');
 define('info_p2', 'Come enjoy it with family, friends, for 1 day or more. 

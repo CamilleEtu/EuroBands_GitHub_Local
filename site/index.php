@@ -32,16 +32,14 @@ $nbArt = count($tableauArt);
         ?>
     </header>
 
-    <div class="carrousel">
-            <?php echo car; ?>
-    </div>
-
+<main>
+    <div><?php require_once(car); ?> </div>
     <div class="container_p1">
         <div>
             <img src="./img/Angele.png">
             <div>
                 <p> <?php echo index_p1; ?> </p>
-                <a href="./page_information.php">Voir plus</a>
+                <a href="./page_information.php"> <?php echo index_more;?></a>
             </div>
         </div>
     </div>
@@ -50,7 +48,7 @@ $nbArt = count($tableauArt);
         <h1 class="titre_accueil"><?php echo index_titre2; ?></h1>
         <!-- Système qui automatise la liste d'affichage des artistes en appelans les différentes données depuis la BDD -->
         <?php
-        echo '<p class="description_nb_artistes">Voici les ' . $nbArt . ' artistes présents pour Eurobands.</p>';
+        echo "<p class='description_nb_artistes'> Nombre dartistes présent pour EuroBands : " . $nbArt . "</p>";
         ?>
         <ul id="artistes" class="image-gallery">
             <?php
@@ -65,6 +63,7 @@ $nbArt = count($tableauArt);
             ?>
         </ul>
     </div>
+</main>
 
     <!-- Appel du footer depuis le fichier footer.php -->
     <footer>
