@@ -1,3 +1,4 @@
+/*---------Page Gestion Choix---------------*/
 .choix {
     display: flex;
     justify-content: center;
@@ -31,4 +32,45 @@
 }
 .choix > a > input:not(:hover){
     transition: 0.75s;
+}
+
+/*--------Page Formulaire Ajout Artiste-------------------*/
+.formAjout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 170px 0px 170px 0px;
+}
+.formAjout > h1 {
+    padding-bottom: 20px;
+}
+.formAjout > form {
+    font-weight: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.formAjout > form > input, textarea, select {
+    margin: 10px;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+.formAjout > form > input {
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+}
+.formAjout > form > input:hover {
+    background-color: #dedede;
+    color: #4f4f4f;
+    transition: 0.25s;
+}
+.formAjout > form > input:not(:hover) {
+    transition: 0.75s;
+}
+.formAjout > form > textarea {
+    outline: none;
+}
+.formAjout > form > textarea:hover {
+    border-color: #fdb7b9;
 }

@@ -41,18 +41,18 @@
                 switch ($_GET["choix"]) {
                     case 1:
             ?>
-            
+
                 <div class="formAjout">
                     <h1>Ajout d'un Artiste</h1>
                     <form method="POST" action="gestArtistes.php?ajout=1">
-                        Nom : <input type="text" name="nom" required></br>
-                        Prénom (s'il existe) : <input type="text" name="prenom"></br>
+                        Nom : <input type="text" name="nom" placeholder="Le nom" required></br>
+                        Prénom (s'il existe) : <input type="text" name="prenom" placeholder="Le prénom"></br>
                         Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01" required></br>
-                        Description de l'artiste : <textarea name="bio" required rows="8" cols="33" required>Il s'agit d'un artiste de ...</textarea></br>
-                        Description de l'artiste en anglais: <textarea name="bioAnglais" required rows="8" cols="33" required>It's about ...</textarea></br>
-                        Nation : <input type="text" name="nation" required></br>
-                        URL d'une vidéo de l'artiste : <input type="text" name="video"></br>
-                        IMG de l'artiste : <input type="text" name="img"></br>
+                        Description de l'artiste : <textarea name="bio" required rows="1" cols="33" required>Il s'agit d'un artiste de ...</textarea></br>
+                        Description de l'artiste en anglais: <textarea name="bioAnglais" required rows="1" cols="33" required>It's about ...</textarea></br>
+                        Nation : <input type="text" name="nation" placeholder="Le pays" required></br>
+                        URL d'une vidéo de l'artiste : <input type="text" name="video" placeholder="Lien vidéo"></br>
+                        IMG de l'artiste : <input type="text" name="img" placeholder="Design représentatif"></br>
                         Style : <select name="style">
                             <?php
                             require_once("classes/Gestionnaire.php");
