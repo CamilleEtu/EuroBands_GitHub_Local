@@ -10,9 +10,7 @@
     </head>
     <body>
         <?php
-        //besoin temporaire en attendant de pouvoir travailler dans index.php
-        $_SESSION['admin'] = 'true';
-        if (isset($_SESSION['admin'])) {
+        if (isset($_COOKIE["admin"])) {
             if (!isset($_GET["choix"])) {
                 ?>
                         <h1>Que voulez-vous faire ?</h1>

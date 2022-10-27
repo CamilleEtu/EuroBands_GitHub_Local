@@ -36,8 +36,8 @@
 
                     if (isset($_POST["login"])) {
                         if ($_POST["login"] == "admin" && $_POST["mdp"] == "eurobandsMDP") {
-                            $_SESSION['admin'] = 'true';
-                            header("location: index.php");
+                            setcookie("admin", "oui", time() + (86400 * 30), "/");
+                            header("location: index.php?lang=fr");
                             exit();
                         }
                         else{

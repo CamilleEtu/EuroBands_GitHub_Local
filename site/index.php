@@ -1,7 +1,6 @@
 <!-- Connextion à la base de donnée -->
 
 <?php
-session_start();
 $bdd = new PDO('mysql:host=localhost;port=3306;dbname=eurobands', 'root', '');
 
 $requete = 'SELECT * FROM artiste';
@@ -25,13 +24,12 @@ $nbArt = count($tableauArt);
 
 <body>
     <!-- Appel du header depuis le fichier header.php -->
-    <header>
-        <?php
+    <?php 
+        echo "<header>";
         include './header.php';
         include("lang.php");
-        ?>
-    </header>
-
+        echo "</header>";
+?>
 <main>
     <div><?php require_once(car); ?> </div>
     <div class="container_p1">
