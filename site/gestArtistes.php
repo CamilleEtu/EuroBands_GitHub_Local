@@ -6,6 +6,8 @@
         <title>EuroBands admin gestion artistes</title>
         
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/styleGestArtistes.css" />
+
 
             <!-- FAVICON -->
     <!--     <link rel="shortcut icon" type="image/x-icon" href="images/crown.png" /> -->
@@ -14,8 +16,8 @@
 
     <?php
     echo "<header>";
-    include './header.php';
     include("lang.php");
+    include './header.php';
     echo "</header>";
     ?>
 
@@ -25,44 +27,49 @@
         if (isset($_COOKIE["admin"])) {
             if (!isset($_GET["choix"])) {
         ?>
-                        <h1>Que voulez-vous faire ?</h1>
-            <a href="gestArtistes.php?choix=1"><input type="button" value="Ajouter un nouvel artiste"></a>
-            <a href="gestArtistes.php?choix=2"><input type="button" value="Modifier un artiste existant"></a>
-            <a href="gestArtistes.php?choix=3"><input type="button" value="Supprimer un artiste"></a>
+
+            <div class="choix">
+                <h1>Que voulez-vous faire ?</h1>
+                <a href="gestArtistes.php?choix=1"><input type="button" value="Ajouter un nouvel artiste"></a>
+                <a href="gestArtistes.php?choix=2"><input type="button" value="Modifier un artiste existant"></a>
+                <a href="gestArtistes.php?choix=3"><input type="button" value="Supprimer un artiste"></a>
+            </div>
             
             <?php
             }
             else{
                 switch ($_GET["choix"]) {
                     case 1:
+            ?>
+            
+                <div class="formAjout">
+                    <h1>Ajout d'un Artiste</h1>
+                    <form method="POST" action="gestArtistes.php?ajout=1">
+                        Nom : <input type="text" name="nom" required></br>
+                        Prénom (s'il existe) : <input type="text" name="prenom"></br>
+                        Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01" required></br>
+                        Description de l'artiste : <textarea name="bio" required rows="8" cols="33" required>Il s'agit d'un artiste de ...</textarea></br>
+                        Description de l'artiste en anglais: <textarea name="bioAnglais" required rows="8" cols="33" required>It's about ...</textarea></br>
+                        Nation : <input type="text" name="nation" required></br>
+                        URL d'une vidéo de l'artiste : <input type="text" name="video"></br>
+                        IMG de l'artiste : <input type="text" name="img"></br>
+                        Style : <select name="style">
+                            <?php
+                            require_once("classes/Gestionnaire.php");
+                            session_start();
+                            $instance = Gestionnaire::getInstance();
 
-                ?>
-                <h1>Ajout d'un Artiste</h1>
-                <form method="POST" action="gestArtistes.php?ajout=1">
-                    Nom : <input type="text" name="nom" required></br>
-                    Prénom (s'il existe) : <input type="text" name="prenom"></br>
-                    Date de début de carrière : <input type="date" name="dateDebut" value="2000-01-01" min="1950-01-01" max="2022-01-01" required></br>
-                    Description de l'artiste : <textarea name="bio" required rows="8" cols="33" required>Il s'agit d'un artiste de ...</textarea></br>
-                    Description de l'artiste en anglais: <textarea name="bioAnglais" required rows="8" cols="33" required>It's about ...</textarea></br>
-                    Nation : <input type="text" name="nation" required></br>
-                    URL d'une vidéo de l'artiste : <input type="text" name="video"></br>
-                    IMG de l'artiste : <input type="text" name="img"></br>
-                    Style : <select name="style">
-                        <?php
-                        require_once("classes/Gestionnaire.php");
-                        session_start();
-                        $instance = Gestionnaire::getInstance();
+                            for ($i=0; $i < count($instance->styles); $i++) { 
+                                echo "<option>".$instance->styles[$i]->nomStyle."</option>";
+                            }
+                            ?>
+                        </select>
 
-                        for ($i=0; $i < count($instance->styles); $i++) { 
-                            echo "<option>".$instance->styles[$i]->nomStyle."</option>";
-                        }
-                        ?>
-                    </select>
+                    </br></br><input type="submit" value="Ajouter l'artiste">
+                    <input type="reset" value="recommencer">
+                    </form>
+                </div>
 
-                </br></br><input type="submit" value="Ajouter l'artiste">
-                <input type="reset" value="recommencer">
-                </form>
-                    
                 <?php
                         break;
                     case 2:
@@ -191,6 +198,14 @@
         }
             ?>
     </main>
+
+
+    <footer>
+        <?php
+        include './footer.php';
+        ?>
+    </footer>
+
 
     </body>
 </html>

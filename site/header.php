@@ -19,12 +19,12 @@
             <a href="./index.php"><img class="logo1" id="logoNav" src="img/logo_full.png"></a>
             <nav class="navbar">
                 <ul id="Nav">
-                    <li><a href="./index.php#artistes">Artiste</a></li>
-                    <li><a href="./page_information.php">En savoir plus</a></li>
+                    <li><a href="./index.php#artistes"><?php echo header_art; ?></a></li>
+                    <li><a href="./page_information.php"><?php echo header_plus; ?></a></li>
                     <li><a href="./gestArtistes.php">Gestion des artistes</a></li>
                 </ul>
             </nav>
-            <a class="resa" href="./reservation.php">Réservation</a>
+            <a class="resa" href="./reservation.php"><?php echo header_resa; ?></a>
             <a href="?lang=en">EN</a> <a href="?lang=fr"><div class="lgFR">FR</div></a>
         </div>
     </header>
