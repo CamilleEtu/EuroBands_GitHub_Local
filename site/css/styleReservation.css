@@ -7,7 +7,6 @@
 .container_reserv > div {
   display: flex;
   align-items: start;
-  flex-wrap: row;
   gap: 5em;
 }
 
@@ -97,4 +96,25 @@ form {
   transition: 0.3s;
   background-color: rgb(196, 196, 196);
   cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  .container_reserv > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .container_reserv > div > div {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  .container_reserv {
+      padding: 0px;
+  }
+  .container_reserv > div > div {
+    width: 95vw;
+  }
 }

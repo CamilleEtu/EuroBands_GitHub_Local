@@ -390,6 +390,10 @@ h3 {
 
     .footer_nav > ul {
       flex-direction: column;
-    } 
+    }
+
+    .container_footer {
+      text-align: center;
+    }
 
   }
