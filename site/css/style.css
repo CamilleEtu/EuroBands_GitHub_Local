@@ -7,6 +7,7 @@
   font-family: "Fira Sans", sans-serif;
 }
 
+
 /*-----------HEADER---------------*/
 .container_header {
   background-color: #1e1e1e;
@@ -244,6 +245,28 @@ h3 {
   font-family: "Bebas Neue", cursive;
 }
 
+.container_p1{
+  background-image: url("../img/designTexteOpacity.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 85%;
+}
+
+.container_p2 > ul {
+  background-image: url("../img/designTexte.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 85%;
+}
+
+.overlay {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .container_p1 > div {
   display: flex;
   align-items: center;
@@ -265,8 +288,8 @@ h3 {
 
 .container_p1 > div > div > p {
   margin-bottom: 35px;
-  padding: 25px;
-  font-size: 18px;
+  padding: 5em;
+  font-size: 20px;
 }
 
 .container_p1 > div > div > a {
@@ -337,6 +360,7 @@ h3 {
   justify-content: center;
 }
 
+
 .image {
   display: flex;
   width: 100vw;
@@ -394,6 +418,10 @@ h3 {
 
     .container_footer {
       text-align: center;
+    }
+
+    .container_p1 > div > div > p {
+      padding: 1em;
     }
 
   }
