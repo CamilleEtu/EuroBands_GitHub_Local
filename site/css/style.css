@@ -88,6 +88,10 @@ li {
   padding-right: 70px;
 }
 
+@media (max-width: 921px) {
+  
+}
+
 /*------------FOOTER--------------*/
 .logo2 {
   width: 45px;
@@ -328,8 +332,8 @@ nav > ul {
 
 
 @media (max-width: 921px) {
-    .container_p1 {
-        padding: 0px;
-        text-align: center;
-    }
+  .container_p1 {
+    padding: 0px;
+    text-align: center;
+  }
 }
