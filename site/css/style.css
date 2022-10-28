@@ -183,20 +183,32 @@ h3 {
     text-decoration: none;
 }
 
-nav {
+.navbar {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-nav > ul {
+.navbar > ul {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
 
+.footer_nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.footer_nav > ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+} 
+
 /* effet soulignement */
-.container_footer > nav > ul > li > ul > a > li::after {
+ .container_footer > nav > ul > li > ul > a > li::after {
   content: "";
   display: block;
   width: 0;
@@ -370,4 +382,14 @@ nav > ul {
         padding: 0px;
         text-align: center;
     }
-}
+
+    .RS {
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .footer_nav > ul {
+      flex-direction: column;
+    } 
+
+  }
