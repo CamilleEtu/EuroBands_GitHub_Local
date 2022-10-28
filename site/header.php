@@ -47,6 +47,7 @@
             <a href="?lang=en">EN</a> <a href="?lang=fr"><div class="lgFR">FR</div></a>
         </div>
     </header>
+    
     <?php
     }
     ?>
@@ -73,11 +74,6 @@
                 //document.getElementById("Nav").style.width = "170px";
             }
 
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
         }
     </script>
 

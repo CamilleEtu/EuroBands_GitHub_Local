@@ -8,8 +8,7 @@
 }
 
 /*-----------HEADER---------------*/
-.sticky {
-}
+
 .container_header {
   background-color: #1e1e1e;
   display: flex;
@@ -33,11 +32,11 @@ li {
 .container_header .navbar > ul {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .container_header .navbar > ul > li {
   display: flex;
   justify-content: stretch;
-  padding-top: 30px;
 }
 
 .container_header > .resa {
@@ -89,7 +88,31 @@ li {
 }
 
 @media (max-width: 921px) {
-  
+  .logo1 {
+    width: 100px;
+    height: auto;
+    margin: 8px;
+    padding-left: 10px;
+    transition: 0.4s;
+  }
+
+  .container_header .navbar > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container_header .navbar > ul > li {
+    font-size: smaller;
+  }
+
+  .container_header > a {
+    font-size: smaller;
+  }
+
+  .lgFR {
+    padding-right: 30px;
+  }
 }
 
 /*------------FOOTER--------------*/
@@ -97,6 +120,7 @@ li {
   width: 45px;
   height: auto;
 }
+
 .logo2:hover {
   opacity: 75%;
   transition: 0.5s;
@@ -119,22 +143,27 @@ h3 {
   align-items: center;
   height: 150px;
 }
+
 .RS > a > img {
   height: 40px;
   width: auto;
 }
+
 .container_footer > .RS > a {
   text-decoration: none;
   margin: 20px;
   padding: 20px;
 }
+
 .container_footer > .RS > a:hover {
   transform: scale(1.3);
   transition: 0.25s;
 }
+
 .container_footer > .RS > a:not(:hover) {
   transition: 0.25s;
 }
+
 /* effet soulignement */
 .container_footer > .RS > a::after {
   content: "";
@@ -185,6 +214,12 @@ nav > ul {
 
 .container_footer p {
   padding: 15px 0px;
+}
+
+@media (max-width: 921px) {
+  .container_footer {
+    display: flex;
+  }
 }
 
 /*-----------CONTENU--------------*/
