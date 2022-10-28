@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 170px 0px 170px 0px;
+    padding: 170px 0px 150px 0px;
 }
 .choix > h1 {
     padding-bottom: 20px;
@@ -34,7 +34,7 @@
     transition: 0.75s;
 }
 
-/*--------Page Formulaire Ajout Artiste-------------------*/
+/*--------Page Formulaire Ajout/Modif Artiste-------------------*/
 .formAjout {
     display: flex;
     justify-content: center;
@@ -86,6 +86,7 @@
 
 .Ajout, .Recom {
     padding: 10px 10px;
+    margin-left: 10px;
     height: 45px;
     width: auto;
     font-weight: 15px;
@@ -106,7 +107,7 @@
     transition: 0.75s;
 }
 
-/*------------Modif Artistes------------------*/
+/*------------Modif/Supprimer Artistes------------------*/
 .Modif {
     display: flex;
     justify-content: center;
@@ -115,7 +116,7 @@
     padding: 170px 0px 170px 0px;
 }
 .Modif > h1 {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .Modif > form > select {
     outline: 0;
@@ -125,8 +126,9 @@
     box-shadow: none;
     margin: 0;
     cursor: pointer;
+    margin-bottom: 20px;
 }
-.Modif > form > input {
+.Modif > form > div > input {
     padding: 10px 10px;
     height: 45px;
     width: 300px;
@@ -138,11 +140,21 @@
     background: none;
     cursor: pointer;
 }
-.Modif > form > input:hover {
-    background-color: #dedede;
-    color: #4f4f4f;
+.Modif > form > div > input:hover {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border-radius: 25px;
     transition: 0.75s;
 }
-.Modif > form > input:not(:hover) {
+.Modif > form > div > input:not(:hover) {
     transition: 0.75s;
 }
+
+/*-----------Msg Ok / Pas Ok-----------------*/
+.MsgAdminOK {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
