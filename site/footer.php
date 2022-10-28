@@ -16,7 +16,7 @@
                 <a href=""><img src="img/youtube.png"></a>
             </div>
             
-            <nav>
+            <nav class="footer_nav">
                 <ul>
                     <a href=""><li><img class="logo2" src="img/logo_small.png"></li></a>
                     <li><h3><?php echo footer_h3; ?></h3>
