@@ -55,7 +55,6 @@
     <!-------JS EFFET SCROLL--------->
     <script>
         window.onscroll = function() {
-            // scrollFunction()
             myfunction()
         };
 
@@ -64,7 +63,6 @@
 
         function myFunction(x) {
             if (x.matches) { // If media query matches
-                document.body.style.backgroundColor = "yellow";
                 if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
                 document.getElementById("header").style.height = "65px";
                 document.getElementById("header").style.opacity = "100%";
@@ -79,7 +77,6 @@
                 }
             } 
             else {
-                document.body.style.backgroundColor = "pink";
                 if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
                 document.getElementById("header").style.height = "65px";
                 document.getElementById("header").style.opacity = "100%";
@@ -99,22 +96,6 @@
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
 
-        
-
-        /*function scrollFunction() {
-            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-                document.getElementById("header").style.height = "65px";
-                document.getElementById("header").style.opacity = "100%";
-                document.getElementById("logoNav").style.width = "170px";
-                //document.getElementById("Nav").style.width = "170px";
-            } else {
-                document.getElementById("header").style.height = "80px";
-                document.getElementById("header").style.opacity ="90%";
-                document.getElementById("logoNav").style.width = "250px";
-                //document.getElementById("Nav").style.width = "170px";
-            }
-
-        }*/
     </script>
 
 
