@@ -99,6 +99,10 @@
 }
 
 @media (max-width: 1180px) {
+    .container_info {
+        padding-top: 100px;
+    }
+
     .container_info > div{
         flex-direction: column;
     }
