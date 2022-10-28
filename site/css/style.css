@@ -12,9 +12,12 @@
   background-color: #1e1e1e;
   display: flex;
   align-items: center;
-  height: 200px;
+  height: 80px;
   opacity: 90%;
   transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 }
 
 .container_header a,

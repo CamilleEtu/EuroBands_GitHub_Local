@@ -47,7 +47,7 @@
             <a href="?lang=en">EN</a> <a href="?lang=fr"><div class="lgFR">FR</div></a>
         </div>
     </header>
-    
+
     <?php
     }
     ?>
