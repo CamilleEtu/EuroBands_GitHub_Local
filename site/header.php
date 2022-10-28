@@ -62,12 +62,12 @@
 
         function scrollFunction() {
             if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-                document.getElementById("header").style.height = "100px";
+                document.getElementById("header").style.height = "65px";
                 document.getElementById("header").style.opacity = "100%";
                 document.getElementById("logoNav").style.width = "170px";
                 //document.getElementById("Nav").style.width = "170px";
             } else {
-                document.getElementById("header").style.height = "200px";
+                document.getElementById("header").style.height = "80px";
                 document.getElementById("header").style.opacity ="90%";
                 document.getElementById("logoNav").style.width = "250px";
                 //document.getElementById("Nav").style.width = "170px";
