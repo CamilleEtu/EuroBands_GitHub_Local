@@ -1,3 +1,4 @@
+/*---------Page Gestion Choix---------------*/
 .choix {
     display: flex;
     justify-content: center;
@@ -30,5 +31,118 @@
     transition: 0.75s;
 }
 .choix > a > input:not(:hover){
+    transition: 0.75s;
+}
+
+/*--------Page Formulaire Ajout Artiste-------------------*/
+.formAjout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 170px 0px 170px 0px;
+}
+.formAjout > h1 {
+    padding-bottom: 20px;
+}
+.formAjout > form {
+    font-weight: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.formAjout > form > input, textarea, select {
+    margin: 10px;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+.formAjout > form > input {
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+}
+.formAjout > form > input:hover {
+    background-color: #dedede;
+    color: #4f4f4f;
+    transition: 0.25s;
+}
+.formAjout > form > input:not(:hover) {
+    transition: 0.75s;
+}
+.formAjout > form > textarea {
+    outline: none;
+}
+.formAjout > form > textarea:hover {
+    border-color: #fdb7b9;
+}
+.formAjout > form > select {
+    outline: 0;
+    border: 0;
+    background: #dedede;
+    color: #4f4f4f;
+    box-shadow: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+.Ajout, .Recom {
+    padding: 10px 10px;
+    height: 45px;
+    width: auto;
+    font-weight: 15px;
+    letter-spacing: 2px;
+    color: #1e1e1e;
+    border: 2px #1e1e1e solid;
+    text-transform: uppercase;
+    background: none;
+    cursor: pointer;
+}
+.Ajout:hover, .Recom:hover {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border-radius: 25px;
+    transition: 0.75s;
+}
+.Ajout:not(:hover), .Recom:not(:hover){
+    transition: 0.75s;
+}
+
+/*------------Modif Artistes------------------*/
+.Modif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 170px 0px 170px 0px;
+}
+.Modif > h1 {
+    padding-bottom: 20px;
+}
+.Modif > form > select {
+    outline: 0;
+    border: 0;
+    background: #dedede;
+    color: #4f4f4f;
+    box-shadow: none;
+    margin: 0;
+    cursor: pointer;
+}
+.Modif > form > input {
+    padding: 10px 10px;
+    height: 45px;
+    width: 300px;
+    font-weight: 15px;
+    letter-spacing: 2px;
+    color: #1e1e1e;
+    border: 2px #1e1e1e solid;
+    text-transform: uppercase;
+    background: none;
+    cursor: pointer;
+}
+.Modif > form > input:hover {
+    background-color: #dedede;
+    color: #4f4f4f;
+    transition: 0.75s;
+}
+.Modif > form > input:not(:hover) {
     transition: 0.75s;
 }
