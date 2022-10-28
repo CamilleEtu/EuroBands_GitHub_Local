@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/styleReservation.css" />
+    <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
     <title>EuroBands - Réservation</title>
 </head>
 

@@ -23,6 +23,7 @@ $nbArt = count($tableauArt);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
 
     <title>EuroBands</title>
 </head>
