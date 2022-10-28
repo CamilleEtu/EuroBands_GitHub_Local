@@ -25,7 +25,7 @@
                 </ul>
             </nav>
             <a class="resa" href="./reservation.php"><?php echo header_resa; ?></a>
-            <a href="?lang=en">EN</a> <a href="?lang=fr"><div class="lgFR">FR</div></a>
+            <a class="lgEN" href="?lang=en">EN</a> <a href="?lang=fr"><div class="lgFR">FR</div></a>
         </div>
     </header>
 
