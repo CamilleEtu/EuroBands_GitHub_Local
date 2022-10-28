@@ -18,7 +18,7 @@
             
             <nav class="footer_nav">
                 <ul>
-                    <a href=""><li><img class="logo2" src="img/logo_small.png"></li></a>
+                    <a href="./index.php"><li><img class="logo2" src="img/logo_small.png"></li></a>
                     <li><h3><?php echo footer_h3; ?></h3>
                         <ul>
                             <a href=""><li><?php echo footer_apropos; ?></li></a>
