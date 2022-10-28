@@ -61,6 +61,19 @@
         var header = document.getElementById("myHeader");
         var sticky = header.offsetTop;
 
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                document.body.style.backgroundColor = "yellow";
+            } 
+            else {
+                document.body.style.backgroundColor = "pink";
+            }
+        }
+
+        var ecran = window.matchMedia("(max_width: 921px)");
+
+        
+
         function scrollFunction() {
             if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
                 document.getElementById("header").style.height = "65px";
