@@ -1,6 +1,9 @@
 <!-- Connextion à la base de donnée -->
 
 <?php
+if (!isset($_GET["lang"])) {
+    $_GET["lang"] = "fr";
+}
 $bdd = new PDO('mysql:host=localhost;port=3306;dbname=eurobands', 'root', '');
 
 $requete = 'SELECT * FROM artiste';
@@ -57,7 +60,7 @@ $nbArt = count($tableauArt);
                 for ($i = 0; $i < $nbArt; $i++) {
                     echo
                     '<li>
-                    <a href="PageArtistes.php?id=' . $tableauArt[$i]["id_artiste"] . '">
+                    <a href="PageArtistes.php?id=' . $tableauArt[$i]["id_artiste"] . '&lang='.$_GET["lang"].'">
                     <img class="illuArt" src="' . $tableauArt[$i]['url_image_artiste'] . '"></a>
                     <div class="overlay"><span>' . $tableauArt[$i]['prenom_artiste'] . " " . $tableauArt[$i]['nom_artiste'] . '</span></div>
                  </li>';

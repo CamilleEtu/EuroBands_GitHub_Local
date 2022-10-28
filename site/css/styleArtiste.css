@@ -1,7 +1,36 @@
 .container_artiste {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
     padding: 15px;
 }
 
 .description_artiste {
     margin: 5em;
+}
+
+.image_artiste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+  }
+
+  .video_artiste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    min-height: 500px;
+  }
+
+  @media (max-width: 921px) {
+    .video_artiste {
+        min-height: 300px;
+    }
 }
