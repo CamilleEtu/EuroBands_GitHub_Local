@@ -87,6 +87,15 @@ li {
   padding-right: 70px;
 }
 
+.lgEN:hover, .lgFR:hover {
+  color: #FDB7B9;
+  transition: 0.5s;
+}
+
+.lgEN:not(:hover), .lgFR:not(:hover) {
+  transition: 0.5s;
+}
+
 @media (max-width: 921px) {
   .logo1 {
     width: 100px;

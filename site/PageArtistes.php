@@ -61,7 +61,7 @@ $nbArt = count($tableauArt);
 
     <footer>
         <?php
-        include './footer.php';
+            include './footer.php';
         ?>
     </footer>
 </body>
