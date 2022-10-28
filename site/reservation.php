@@ -36,7 +36,7 @@
                 $nbFesti = count($tabFesti);
 
                 // récupère toutes les informations de la table "jour"
-                $requete = 'SELECT * FROM jour';
+                $requete = 'SELECT * FROM jour ORDER BY date';
                 $resultats = $bdd->query($requete);
                 // met les résultats sous forme de tableau
                 $tabJour = $resultats->fetchAll();
@@ -104,7 +104,7 @@
                                     $date = date('l', strtotime($tabJour[$i]['date']));
 
                                     // utilise les données récupérées grâce à la requête pour proposer les différents jours enregistrés dans la base de donnée
-                                    echo '<input type=checkbox name="id_jour[]" id="jour' . $tabJour[$i]['id_jour'] . '" value="' . $tabJour[$i]['id_jour'] . '"/><label for="jour' . $tabJour[$i]['id_jour'] . '">' . $date . '</label></br>';
+                                    echo '<input class="checkDate" type=checkbox name="id_jour[]" id="jour' . $tabJour[$i]['id_jour'] . '" value="' . $tabJour[$i]['id_jour'] . '"/><label for="jour' . $tabJour[$i]['id_jour'] . '">' . $date . '</label></br>';
                                 }
                                 ?>
                             </div>
@@ -130,7 +130,7 @@
             </div>
             <div class="resume">
                 <h2><?php echo resa_total; ?></h2>
-                <p><?php echo resa_prix; ?></p>
+                <p><?php echo resa_prix; ?><span id="totalResa"> 0</span>€</p>
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@
         <?php
         include './footer.php';
         ?>
-        <scrip src="javascript/functions.js"></script>
+                <script src="javascript/functions.js"></script>
     </footer>
 </body>
 
