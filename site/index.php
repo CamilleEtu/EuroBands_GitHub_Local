@@ -4,7 +4,9 @@
 if (!isset($_GET["lang"])) {
     $_GET["lang"] = "fr";
 }
-$bdd = new PDO('mysql:host=localhost;port=3306;dbname=eurobands', 'root', '');
+include_once 'configuration.php';
+
+$bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
 
 $requete = 'SELECT * FROM artiste';
 $resultats = $bdd->query($requete);

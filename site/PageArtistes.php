@@ -1,6 +1,8 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=localhost;port=3306;dbname=eurobands', 'root', '');
+include_once 'configuration.php';
+
+$bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
 
 if (isset($_GET['id'])) {
     $_SESSION["id"] = $_GET['id'];

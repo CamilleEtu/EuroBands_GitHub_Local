@@ -14,6 +14,9 @@
 
 <body>
     <?php
+    if (!isset($_GET["lang"])) {
+        $_GET["lang"] = "fr";
+    }
     if (isset($_COOKIE["admin"])) {
         ?>
     <header id="myHeader">

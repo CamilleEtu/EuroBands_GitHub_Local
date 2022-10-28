@@ -25,8 +25,9 @@
                 <?php
 
                 //var_dump($_POST);
+                include_once 'configuration.php';
 
-                $bdd = new PDO('mysql:host=localhost;port=3306;dbname=eurobands', 'root', '');
+                $bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
                 // récupère toutes les informations de la table "festivalier"
                 $requete = 'SELECT * FROM festivalier';
                 $resultats = $bdd->query($requete);

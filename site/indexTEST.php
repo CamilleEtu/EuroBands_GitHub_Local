@@ -1,12 +1,7 @@
 <!-- Connextion à la base de donnée -->
 
 <?php
-/*les paramètres ci-dessous permettent d'utiliser la base de données en ligne*/
-$hote='mysql-eurobands.alwaysdata.net';
-$utilisateur='eurobands'; //login projet
-$mdp='eurobandsMDP123'; //mdp du projet
-$port=3306; //port 
-$nombase='eurobands_eurobands'; //nom de la base de données
+include_once 'configuration.php';
 
 $bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
 $requete = 'SELECT * FROM artiste';

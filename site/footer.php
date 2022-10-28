@@ -18,7 +18,11 @@
             
             <nav class="footer_nav">
                 <ul>
-                    <?php echo '<a href="./index.php?lang='.$_GET["lang"].'"><li><img class="logo2" src="img/logo_small.png"></li></a>' ?>
+                    <?php
+                        if (!isset($_GET["lang"])) {
+                            $_GET["lang"] = "fr";
+                        }
+                         echo '<a href="./index.php?lang='.$_GET["lang"].'"><li><img class="logo2" src="img/logo_small.png"></li></a>' ?>
                     <li><h3><?php echo footer_h3; ?></h3>
                         <ul>
                             <a href=""><li><?php echo footer_apropos; ?></li></a>
