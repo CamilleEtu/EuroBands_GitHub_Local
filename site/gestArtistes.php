@@ -181,7 +181,7 @@
                                     $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["bioAnglais"],$_POST["nation"],$_POST["video"], $img, $style);
                                     $instance->ajouterArtiste($newArtiste);
                                     echo "
-                                    <div class'MsgAdminOK'>
+                                    <div class='MsgAdminOK'>
                                     <h1>L'artiste a bien été ajouté !</h1></div>";
                                     break;
 
