@@ -86,7 +86,7 @@ define('resa_jour', "Vous souhaitez vous pré-inscrire pour :</br>");
 
 define('resa_total', "TOTAL (à payer sur place)");
 
-define('resa_prix', "Prix : 0€");
+define('resa_prix', "Prix :");
 
 define('resa_valid', "Pré-inscription");
 

@@ -84,7 +84,7 @@ define('resa_jour', "You wish to pre-register for :</br>");
 
 define('resa_total', "TOTAL (to be paid on site)");
 
-define('resa_prix', "Price : 0€");
+define('resa_prix', "Price :");
 
 define('resa_valid', "Pre-register");
 
