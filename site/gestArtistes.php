@@ -56,7 +56,6 @@
                         Style : <select name="style">
                             <?php
                             require_once("classes/Gestionnaire.php");
-                            session_start();
                             $instance = Gestionnaire::getInstance();
 
                             for ($i=0; $i < count($instance->styles); $i++) { 
@@ -78,7 +77,6 @@
                             
                             echo '<div class="Modif"><h1>Modification d\'artistes</h1>';
                             require_once("classes/Gestionnaire.php");
-                            session_start();
                             $instance = Gestionnaire::getInstance();
 
                             //affiche un select pour que l'utilisateur choisisse l'artiste qu'il veut modifier'
@@ -100,7 +98,6 @@
                                 <div class ='Modif'>
                                 <h1>Suppression d'artiste</h1>";
                                 require_once("classes/Gestionnaire.php");
-                                session_start();
                                 $instance = Gestionnaire::getInstance();
 
                                 //affiche un select pour que l'utilisateur choisisse l'artiste qu'il veut modifier
@@ -121,7 +118,6 @@
                                 break;
                             case 4:
                                 require_once("classes/Gestionnaire.php");
-                                session_start();
                                 $instance = Gestionnaire::getInstance();
                                 echo "
                                 <div class='formAjout'>
@@ -162,7 +158,6 @@
                         if (isset($_GET["ajout"])) {
                             require_once("classes/Artiste.php");
                             require_once("classes/Gestionnaire.php");
-                            session_start();
                             //permet de se connecter à la base de donnée et de récupérer tous les héros du meilleur au moins bon (en fonction du classement)
                             $instance = Gestionnaire::getInstance();
                             switch ($_GET["ajout"]) {
@@ -173,12 +168,18 @@
                                     else{
                                         $img = $_POST["img"];
                                     }
+                                    if ($_POST["video"] == "") {
+                                        $video = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+                                    }
+                                    else{
+                                        $video = $_POST["video"];
+                                    }
                                     for ($i=0; $i < count($instance->styles); $i++) { 
                                         if ($instance->styles[$i]->nomStyle == $_POST["style"]) {
                                             $style = $instance->styles[$i];
                                         }
                                     }
-                                    $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["bioAnglais"],$_POST["nation"],$_POST["video"], $img, $style);
+                                    $newArtiste = new Artiste($_POST["nom"],$_POST["prenom"],$_POST["dateDebut"],$_POST["bio"],$_POST["bioAnglais"],$_POST["nation"],$video, $img, $style);
                                     $instance->ajouterArtiste($newArtiste);
                                     echo "
                                     <div class='MsgAdminOK'>

@@ -17,6 +17,25 @@
     <!---HEADER-->
     <header>
         <?php
+            if (isset($_POST["login"])) {
+                if ($_POST["login"] == "admin" && $_POST["mdp"] == "eurobandsMDP") {
+                    setcookie("admin", "oui", time() + (86400 * 30), "/");
+                    header("location: https://eurobands.alwaysdata.net/index.php?lang=fr");
+                    exit();
+                } else {
+                    if ($_POST["login"] != "admin" && $_POST["mdp"] != "eurobandsMDP") {
+                        echo "<h3>Votre login et votre mot de passe sont incorects !</h3>";
+                    } else {
+                        if ($_POST["login"] != "admin") {
+                            echo "<h3>Votre login est incorrect !</h3>";
+                        } else {
+                            echo "<h3>Votre mot de passe est incorrect !</h3>";
+                        }
+                    }
+                }
+            }
+
+        include("lang.php");
         include './header.php';
         ?>
     </header>
@@ -36,27 +55,7 @@
             <div><input type="submit" value="Connexion" class="submit"></div>
 
             <div class="msgErreur">
-                <?php
-
-                if (isset($_POST["login"])) {
-                    if ($_POST["login"] == "admin" && $_POST["mdp"] == "eurobandsMDP") {
-                        setcookie("admin", "oui", time() + (86400 * 30), "/");
-                        header("location: index.php?lang=fr");
-                        exit();
-                    } else {
-                        if ($_POST["login"] != "admin" && $_POST["mdp"] != "eurobandsMDP") {
-                            echo "<h3>Votre login et votre mot de passe sont incorects !</h3>";
-                        } else {
-                            if ($_POST["login"] != "admin") {
-                                echo "<h3>Votre login est incorrect !</h3>";
-                            } else {
-                                echo "<h3>Votre mot de passe est incorrect !</h3>";
-                            }
-                        }
-                    }
-                }
-
-                ?>
+                
             </div>
     </div>
 
