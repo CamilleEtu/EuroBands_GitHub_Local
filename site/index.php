@@ -46,7 +46,7 @@ $nbArt = count($tableauArt);
             <div>
                 <div>
                     <p> <?php echo index_p1; ?> </p>
-                    <a href="./page_information.php"> <?php echo index_more; ?></a>
+                    <?php echo '<a href="./page_information.php?lang='.$_GET["lang"].'">'.index_more; ?></a>
                 </div>
             </div>
         </div>

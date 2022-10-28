@@ -36,14 +36,14 @@
 
     <header id="myHeader">
         <div class="container_header" id="header">
-            <a href="./index.php"><img class="logo1" id="logoNav" src="img/logo_full.png"></a>
+        <?php echo  '<a href="./index.php?lang='.$_GET["lang"].'"><img class="logo1" id="logoNav" src="img/logo_full.png"></a>'; ?>
             <nav class="navbar">
                 <ul id="Nav">
-                    <li><a href="./index.php#artistes"><?php echo header_art; ?></a></li>
-                    <li><a href="./page_information.php"><?php echo header_plus; ?></a></li>
+                <?php echo '<li><a href="./index.php?lang='.$_GET["lang"].'#artistes">'.header_art; ?></a></li>
+                <?php echo '<li><a href="./page_information.php?lang='.$_GET["lang"].'">'.header_plus; ?></a></li>
                 </ul>
             </nav>
-            <a class="resa" href="./reservation.php"><?php echo header_resa; ?></a>
+            <?php echo '<a class="resa" href="./reservation.php?lang='.$_GET["lang"].'">'.header_resa; ?></a>
             <a href="?lang=en">EN</a> <a href="?lang=fr"><div class="lgFR">FR</div></a>
         </div>
     </header>

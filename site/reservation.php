@@ -138,6 +138,7 @@
         <?php
         include './footer.php';
         ?>
+        <scrip src="javascript/functions.js"></script>
     </footer>
 </body>
 
