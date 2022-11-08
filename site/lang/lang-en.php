@@ -71,6 +71,8 @@ define('resa_titre1', "Free registering");
 
 define('resa_titre2', "Pre-registering form");
 
+define('resa_obli', "Spaces with a * are required");
+
 define('resa_nom', "Enter your Lastname :");
 define('resa_Nom', "Lastname");
 

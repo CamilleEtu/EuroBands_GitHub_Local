@@ -73,6 +73,8 @@ define('resa_titre1', "Réservation gratuite");
 
 define('resa_titre2', "Formulaire de pré-réservation");
 
+define('resa_obli', "Les champs avec un * sont obligatoires");
+
 define('resa_nom', "Entrez votre Nom :");
 define('resa_Nom', "Nom");
 
