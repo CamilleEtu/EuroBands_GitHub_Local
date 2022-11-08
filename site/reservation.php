@@ -83,6 +83,7 @@
                 ?>
                     <div class="formulaire">
                         <h2><?php echo resa_titre2; ?></h2>
+                        <p><?php echo resa_obli; ?></p>
                         <form action="form_festi.php?ajout=1" method="POST" class="form_festi">
                             <div>
                                 <label for="nom"><?php echo resa_nom; ?></label>

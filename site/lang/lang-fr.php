@@ -73,13 +73,15 @@ define('resa_titre1', "Réservation gratuite");
 
 define('resa_titre2', "Formulaire de pré-réservation");
 
-define('resa_nom', "Entrez votre Nom :");
+define('resa_obli', "Les champs avec un * sont obligatoires");
+
+define('resa_nom', "Entrez votre Nom* :");
 define('resa_Nom', "Nom");
 
-define('resa_prenom', "Entrez votre Prénom :");
+define('resa_prenom', "Entrez votre Prénom* :");
 define('resa_Prenom', "Prénom");
 
-define('resa_mail', "Entrez votre adresse email :");
+define('resa_mail', "Entrez votre adresse email* :");
 define('resa_Email', "Email");
 
 define('resa_jour', "Vous souhaitez vous pré-inscrire pour :</br>");
