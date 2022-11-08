@@ -295,9 +295,16 @@ h3 {
   flex-direction: column;
 }
 
+h6 {
+  font-size: x-large;
+  margin-bottom: 3em;
+}
+
 .container_p1 > div > div > p {
-  margin-bottom: 35px;
-  padding: 5em;
+  padding-top: 3em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
   font-size: 20px;
 }
 
