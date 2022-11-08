@@ -73,13 +73,13 @@ define('resa_titre2', "Pre-registering form");
 
 define('resa_obli', "Spaces with a * are required");
 
-define('resa_nom', "Enter your Lastname :");
+define('resa_nom', "Enter your Lastname* :");
 define('resa_Nom', "Lastname");
 
-define('resa_prenom', "Enter your Surname :");
+define('resa_prenom', "Enter your Surname* :");
 define('resa_Prenom', "Surname");
 
-define('resa_mail', "Enter your Email :");
+define('resa_mail', "Enter your Email* :");
 define('resa_Email', "Email");
 
 define('resa_jour', "You wish to pre-register for :</br>");

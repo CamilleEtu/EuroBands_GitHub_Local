@@ -86,15 +86,15 @@
                         <p><?php echo resa_obli; ?></p>
                         <form action="form_festi.php?ajout=1" method="POST" class="form_festi">
                             <div>
-                                <label for="nom"><?php echo resa_nom.'*'; ?></label>
+                                <label for="nom"><?php echo resa_nom; ?></label>
                                 <input class="input_reserv" type="text" name="nom" id="nom" placeholder=<?php echo resa_Nom; ?> required>
                             </div>
                             <div>
-                                <label for="prenom"><?php echo resa_prenom.'*'; ?></label>
+                                <label for="prenom"><?php echo resa_prenom; ?></label>
                                 <input class="input_reserv" type="text" name="prenom" id="prenom" placeholder=<?php echo resa_Prenom; ?> required>
                             </div>
                             <div>
-                                <label for="mail"><?php echo resa_mail.'*'; ?></label>
+                                <label for="mail"><?php echo resa_mail; ?></label>
                                 <input class="input_reserv" type="email" name="mail" id="mail" placeholder=<?php echo resa_Email; ?> required>
                             </div>
 
