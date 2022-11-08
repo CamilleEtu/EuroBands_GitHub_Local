@@ -62,9 +62,9 @@
                         $succes = $reqpreparee->execute();
                         $id_festivalier = $bdd->lastInsertId();
                         if ($succes == true) {
-                            echo 'Vous êtes maintenant pré-inscri !</br>';
+                            echo ok;
                         } else {
-                            echo 'Erreur de connexion à la base de données :( </br>';
+                            echo nope;
                         }
                         // compte les données du tableau
                         $nbJourReserve = count($_POST["id_jour"]);
@@ -84,7 +84,7 @@
                     <div class="formulaire">
                         <h2><?php echo resa_titre2; ?></h2>
                         <p><?php echo resa_obli; ?></p>
-                        <form action="form_festi.php?ajout=1" method="POST" class="form_festi">
+                        <form action="reservation.php?ajout=1" method="POST" class="form_festi">
                             <div>
                                 <label for="nom"><?php echo resa_nom; ?></label>
                                 <input class="input_reserv" type="text" name="nom" id="nom" placeholder=<?php echo resa_Nom; ?> required>
@@ -117,24 +117,19 @@
                             </div>
                         </form>
                     </div>
+                    
+                </div>
+                <div class="resume">
+                        <h2><?php echo resa_total; ?></h2>
+                        <p><?php echo resa_prix; ?><span id="totalResa"> 0</span>€</p>
+                    </div>
 
                 <?php
                 }
                 ?>
 
-                <?php
-                if (isset($_POST['nom'])) {
-
-                    echo '<a href = "../index.php"><button class="acc">Accueil</a></button>';
-                }
-                ?>
-
-
             </div>
-            <div class="resume">
-                <h2><?php echo resa_total; ?></h2>
-                <p><?php echo resa_prix; ?><span id="totalResa"> 0</span>€</p>
-            </div>
+            
         </div>
     </div>
     <footer>

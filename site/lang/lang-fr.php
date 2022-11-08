@@ -99,6 +99,10 @@ define('resa_valid', "Pré-inscription");
 
 define('resa_effa', "Effacer");
 
+define('ok', 'Vous êtes maintenant pré-inscri !');
+
+define('nope', 'Erreur de connexion à la base de données...');
+
 // Footer ---------------------------------------------------
 define('footer_h3', "Plan du site");
 
