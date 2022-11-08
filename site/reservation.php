@@ -107,7 +107,7 @@
                                     $date = date('l', strtotime($tabJour[$i]['date']));
 
                                     // utilise les données récupérées grâce à la requête pour proposer les différents jours enregistrés dans la base de donnée
-                                    echo '<input class="checkDate" type=checkbox name="id_jour[]" id="jour' . $tabJour[$i]['id_jour'] . '" value="' . $tabJour[$i]['id_jour'] . '"/><label for="jour' . $tabJour[$i]['id_jour'] . '">' . $date . '</label></br>';
+                                    echo '<br><input class="checkDate" type=checkbox name="id_jour[]" id="jour' . $tabJour[$i]['id_jour'] . '" value="' . $tabJour[$i]['id_jour'] . '"/><label for="jour' . $tabJour[$i]['id_jour'] . '">' . $date . '</label></br>';
                                 }
                                 ?>
                             </div>
