@@ -259,7 +259,7 @@ h3 {
 }
 
 .container_p1{
-  background-image: url("../img/designTexteOpacity.png");
+  background-image: url("../img/designTexteOpacity.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -267,7 +267,7 @@ h3 {
 }
 
 .container_p2 > ul {
-  background-image: url("../img/designTexte.png");
+  background-image: url("../img/designTexte.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
