@@ -1,4 +1,7 @@
 <?php
+//title of the page
+define('title', "Official EuroBands Website");
+
 // Footer ---------------------------------------------------
 define('header_art', "Artists");
 
