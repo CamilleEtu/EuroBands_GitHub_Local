@@ -98,6 +98,10 @@ define('resa_valid', "Pre-register");
 
 define('resa_effa', "Clear");
 
+define('ok', 'You are now pre-registered !');
+
+define('nope', 'Database connection error...');
+
 // Footer ---------------------------------------------------
 define('footer_h3', "Site map");
 
