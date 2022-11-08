@@ -263,7 +263,7 @@ h3 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: 85%;
+  background-size: 100vw;
 }
 
 .container_p2 > ul {
@@ -271,7 +271,7 @@ h3 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: 85%;
+  background-size: 100vw;
 }
 
 .overlay {
