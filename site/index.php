@@ -65,7 +65,7 @@ $nbArt = count($tableauArt);
                     echo
                     '<li>
                     <a href="PageArtistes.php?id=' . $tableauArt[$i]["id_artiste"] . '&lang='.$_GET["lang"].'">
-                    <img class="illuArt" src="' . $tableauArt[$i]['url_image_artiste'] . '"></a>
+                    <img class="illuArt" src="' . $tableauArt[$i]['url_image_artiste'] . '" alt="' . $tableauArt[$i]['prenom_artiste'] . " " . $tableauArt[$i]['nom_artiste'] . '"></a>
                     <div class="overlay"><span>' . $tableauArt[$i]['prenom_artiste'] . " " . $tableauArt[$i]['nom_artiste'] . '</span></div>
                  </li>';
                 }
