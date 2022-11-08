@@ -100,7 +100,19 @@ li {
   transition: 0.5s;
 }
 
-@media (max-width: 921px) {
+.menu{
+  display: none;
+}
+
+@media (max-width: 735px) {
+  .logo1{
+    width: 100px;
+    height: auto;
+    margin: 8px;
+    padding-left: 10px;
+    transition: 0.4s;
+  }
+
   .container_header .navbar > ul {
     /*
     display: flex;
@@ -114,6 +126,10 @@ li {
 
   .lgFR, .lgEN, .container_header .navbar > ul > li, .container_header .navbar > ul, .resa {
     display: none;
+  }
+
+  .menu{
+    display: block;
   }
 }
 
