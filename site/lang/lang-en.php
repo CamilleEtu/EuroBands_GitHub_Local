@@ -1,8 +1,6 @@
 <?php
-//title of the page
+// Titre de la page ---------------------------------------------------
 define('title', "Official EuroBands Website");
-
-define('admin_co', "Admin Connection");
 
 // Footer ---------------------------------------------------
 define('header_art', "Artists");
@@ -120,9 +118,57 @@ define('footer_cgv', "GTC");
 define('footer_coord', "Contact details");
 
 // Page Co Admin ---------------------------------------------------
+define('admin_co', "Admin Connection");
+
 define('regis_id', "Enter your login");
 
 define('regis_mdp', "Enter your password");
 
 define('regis_co', "Connection");
+
+// Page Mentions Légales ---------------------------------------------------
+define('mL_titre', 'Legal section');
+
+define('mL_eB', 'Headquarter | Le Puy-en-Velay</br>
+European Union | EU</br>
+Music festival-type event organised by the town hall with a playful, cultural and creative aim for the 30th anniversary of the European Union.</br></br>');
+
+define('mL_titreCo', 'Coordinates');
+
+define('mL_titrePro', 'Intellectual property information');
+
+define('mL_p1', '<strong>Artist Descriptions</strong> | Wikipédia</br>
+<strong>Links video clips artists</strong> | Youtube</br>
+<strong>Artist photos</strong> |</br>
+Bigflo et Oli - Julien Doré - Enrique Iglesias – Angèle - Sam the Kid - U2 - Pegboard Nerds – Mero - Hldano Pivo - The Rasmus - Armin Van Buuren - The Knife</br></br>
+
+<strong>EUROBANDS</strong> is the exclusive owner of the intellectual rights of the Site as well as the creations, whether visual or sound, appearing on this Site, including in particular texts, comments, illustrations, source codes, images, as well as its databases of which it is the sole producer.</br></br>
+
+<strong>EUROBANDS</strong> has also integrated on its website visual elements held by third parties for which an operating license has been concluded.</br></br>
+
+All these intellectual creations are protected under copyright, trademark law, sui generis database law and image law for the whole world.</br></br>
+
+These creations are the complete property of <strong>EUROBANDS</strong>.</br></br>
+
+However, the latter grants Internet users a license allowing them to display the contents of the Site, but only and strictly for their personal use in the context of viewing the Site and the services offered therein.</br></br>
+
+This license however excludes the right of Users to modify, copy, translate, distribute, transmit, distribute, produce, display and reproduce any content appearing on and through the Site and to assign the rights thereto.</br></br>
+
+As such and in accordance with the provisions of the Intellectual Property Code, only use for private use subject to different or more restrictive provisions of this code is permitted.</br></br>
+
+As a reminder, affixing a hypertext link to the Site, using the technique of framing or deep linking, is strictly prohibited.</br></br>
+
+Any other use constitutes an infringement and is sanctioned under Intellectual Property unless prior authorization of <strong>EUROBANDS</strong>.</br></br>
+
+Any form of full or partial copying, aspiration and reproduction of the database produced and exploited by <strong>EUROBANDS</strong> on the Site is strictly prohibited without its prior written consent.</br></br>
+
+Any reproduction of photographs, texts, logos and distinctive signs appearing on the Site constitutes an infringement liable to criminal sanctions. The offender is liable to civil and criminal sanctions and in particular to the penalties provided for in articles L. 335.2, L. 343.4 and L.713-2 of the Intellectual Property Code.</br></br>
+
+The User undertakes, in general, to comply with all the regulations in force in France.</br></br>');
+
+define('mL_titreHeber', 'Information relating to the hosting of the site');
+
+define('mL_p2', 'The company ALWAYSDATA, SARL with capital of 200.000 € registered in the RCS of Paris under number 492 893 490 whose registered office is 91 rue du Faubourg Saint Honoré - 75008 Paris.</br></br>
+
+Publishing Director: Monsieur Nicolas FERRARI');
 ?>
