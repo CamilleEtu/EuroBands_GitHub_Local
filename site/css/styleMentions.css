@@ -1,0 +1,36 @@
+.texte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 170px 100px 130px 100px;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.titre {
+    border-bottom: solid 2px #fdb7b9;
+    padding-bottom: 5px;
+}
+p {
+    font-size: 12pt;
+    text-align: justify;
+    padding:0px 150px 20px 150px;
+}
+
+@media (max-width: 1250px){
+    p {
+        padding: 0px 100px 20px 100px;
+    }
+}
+@media (max-width: 1000px){
+    .texte {
+        padding: 200px 50px;
+    }
+    p {
+        padding: 0px 25px 20px 25px;
+    }
+}

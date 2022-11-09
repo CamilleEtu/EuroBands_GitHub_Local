@@ -33,7 +33,7 @@
                     </li>
                     <li><h3><?php echo footer_legal; ?></h3>
                         <ul>
-                            <a href=""><li><?php echo footer_mentions; ?></li></a>
+                            <a href="mentionsLegales.php"><li><?php echo footer_mentions; ?></li></a>
                             <a href=""><li><?php echo footer_cgv; ?></li></a>
                         </ul>
                     </li>
