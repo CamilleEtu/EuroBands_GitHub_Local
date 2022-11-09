@@ -2,6 +2,8 @@
 //title of the page
 define('title', "Official EuroBands Website");
 
+define('admin_co', "Admin Connection");
+
 // Footer ---------------------------------------------------
 define('header_art', "Artists");
 
@@ -116,4 +118,11 @@ define('footer_mentions', "Legal information");
 define('footer_cgv', "GTC");
 
 define('footer_coord', "Contact details");
+
+// Page Co Admin ---------------------------------------------------
+define('regis_id', "Enter your login");
+
+define('regis_mdp', "Enter your password");
+
+define('regis_co', "Connection");
 ?>

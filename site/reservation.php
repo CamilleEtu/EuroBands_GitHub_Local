@@ -8,7 +8,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/styleReservation.css" />
     <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
-    <title>EuroBands - Réservation</title>
+    <meta type="descritpion" content="Page d'accueil du site du festival Européen de musique, EuroBands">
+    <meta type="keywords" content="eurobands, festival, music, international">
+    <title>Official EuroBands | Réservation</title>
 </head>
 
 <body>
