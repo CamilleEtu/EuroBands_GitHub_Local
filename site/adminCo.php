@@ -1,3 +1,7 @@
+<?php
+include "lang.php"; 
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,8 +12,10 @@
     <link href="./css/styleAdminCo.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
+    <meta type="descritpion" content="Page d'accueil du site du festival Européen de musique, EuroBands">
+    <meta type="keywords" content="eurobands, festival, music, international">
 
-    <title>EuroBands Admin</title>
+    <title>Official EuroBands | <?php echo admin_co; ?></title>
 </head>
 
 
@@ -35,7 +41,6 @@
                 }
             }
 
-        include("lang.php");
         include './header.php';
         ?>
     </header>
@@ -45,14 +50,14 @@
     <div class="continuer">
         <form action="" method="POST">
             <div><label for="login">login</label>
-                <input type="text" name="login" id="login" placeholder="Entrez votre identifiant" class="co" required>
+                <input type="text" name="login" id="login" placeholder="<?php echo regis_id ?>" class="co" required>
             </div></br>
 
             <div><label for="login">mdp</label>
-                <input type="password" name="mdp" id="mdp" placeholder="Entrez le mot de passe" class="co" required>
+                <input type="password" name="mdp" id="mdp" placeholder="<?php echo regis_mdp ?>" class="co" required>
             </div></br>
 
-            <div><input type="submit" value="Connexion" class="submit"></div>
+            <div><input type="submit" value="<?php echo regis_co ?>" class="submit"></div>
 
             <div class="msgErreur">
                 

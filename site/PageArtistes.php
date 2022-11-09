@@ -27,7 +27,10 @@ $nbArt = count($tableauArt);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styleArtiste.css" />
     <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
-    <title>EuroBands - Page d'Artiste</title>
+    <meta type="descritpion" content="Page d'accueil du site du festival Européen de musique, EuroBands">
+    <meta type="keywords" content="eurobands, festival, music, international">
+
+    <title>Official EuroBands | A propos de l'Artiste</title>
 </head>
 
 <body>

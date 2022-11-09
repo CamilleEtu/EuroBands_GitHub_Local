@@ -2,13 +2,15 @@
 <html lang="fr">
 
 <head>
-    <meta type="descritpion" content="eurobands, festival, music, international">
+    <meta type="descritpion" content="Page d'accueil du site du festival Européen de musique, EuroBands">
     <meta charset="utf-8">
     <meta type="keywords" content="eurobands, festival, music, international">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/PageInfo.css" />
     <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
+
+    <title>Official EuroBands | En savoir plus</title>
 </head>
 
 <body>

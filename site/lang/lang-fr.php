@@ -2,6 +2,8 @@
 //titre de la page
 define('title', "Site Officiel de EuroBands");
 
+define('admin_co', "Admin Connexion");
+
 // Footer ---------------------------------------------------
 define("header_art", "Artistes");
 
@@ -117,4 +119,11 @@ define('footer_mentions', "Mentions légales");
 define('footer_cgv', "CGV");
 
 define('footer_coord', "Coordonnées");
+
+// Page Co Admin ---------------------------------------------------
+define('regis_id', "Entrez votre identifiant");
+
+define('regis_mdp', "Entrez le mot de passe");
+
+define('regis_co', "Connexion");
 ?>
