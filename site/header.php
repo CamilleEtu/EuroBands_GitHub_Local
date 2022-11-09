@@ -98,13 +98,16 @@
                     document.getElementById("sidebar-menu").style.visibility = "visible";
                     document.getElementById("sidebar-menu").style.right = 0;
                     document.getElementById("sidebar-menu").style.transition = "0.3s";
+                    document.getElementById("sidebar-menu").style.setProperty("-webkit-transition", "0.3s");
                     document.getElementById("overlay").style.visibility = "visible";
                     document.getElementById("overlay").style.opacity = 0.4;
                 }
             else{
                 document.getElementById("sidebar-menu").style.visibility = "hidden";
                 document.getElementById("sidebar-menu").style.removeProperty("transition");
+                document.getElementById("sidebar-menu").style.removeProperty("-webkit-transition");
                 document.getElementById("sidebar-menu").style.transition = "0.3s";
+                document.getElementById("sidebar-menu").style.setProperty("-webkit-transition", "0.3s");
                 document.getElementById("sidebar-menu").style.removeProperty("right");
                 document.getElementById("overlay").style.visibility = "hidden";
                 document.getElementById("overlay").style.opacity = 0;
