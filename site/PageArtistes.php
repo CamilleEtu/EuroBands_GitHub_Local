@@ -15,7 +15,6 @@ $requete = 'SELECT * FROM artiste WHERE id_artiste =' . $_GET['id'];
 $resultats = $bdd->query($requete);
 $tableauArt = $resultats->fetchAll();
 $resultats->closeCursor();
-$nbArt = count($tableauArt);
 ?>
 
 <!DOCTYPE html>
@@ -45,20 +44,16 @@ $nbArt = count($tableauArt);
 
         <?php
         if (!isset($_GET["lang"]) || $_GET["lang"] == "fr") {
-            for ($i = 0; $i < $nbArt; $i++) {
-                echo '<h1 class="titre_accueil">' . $tableauArt[$i]['prenom_artiste'] . ' ' . $tableauArt[$i]['nom_artiste'] . '</h1>';
-                echo '<img class="image_artiste" src="' . $tableauArt[$i]['url_image_artiste'] . '">';
-                echo '<p class="description_artiste">' . $tableauArt[$i]['bio_artiste'] . '</p>';
-                echo '<iframe class="video_artiste" src="' . $tableauArt[$i]['url_video_artiste'] . '">';
-            }
+                echo '<h1 class="titre_accueil">' . $tableauArt[0]['prenom_artiste'] . ' ' . $tableauArt[0]['nom_artiste'] . '</h1>';
+                echo '<img class="image_artiste" src="' . $tableauArt[0]['url_image_artiste'] . '">';
+                echo '<p class="description_artiste">' . $tableauArt[0]['bio_artiste'] . '</p>';
+                echo '<iframe class="video_artiste" src="' . $tableauArt[0]['url_video_artiste'] . '"></iframe>';
         }
         else{
-            for ($i = 0; $i < $nbArt; $i++) {
-                echo '<h1 class="titre_accueil">' . $tableauArt[$i]['prenom_artiste'] . ' ' . $tableauArt[$i]['nom_artiste'] . '</h1>';
-                echo '<img class="image_artiste" src="' . $tableauArt[$i]['url_image_artiste'] . '">';
-                echo '<p class="description_artiste">' . $tableauArt[$i]['bio_anglais'] . '</p>';
-                echo '<iframe class="video_artiste" src="' . $tableauArt[$i]['url_video_artiste'] . '">';
-            }
+                echo '<h1 class="titre_accueil">' . $tableauArt[0]['prenom_artiste'] . ' ' . $tableauArt[0]['nom_artiste'] . '</h1>';
+                echo '<img class="image_artiste" src="' . $tableauArt[0]['url_image_artiste'] . '">';
+                echo '<p class="description_artiste">' . $tableauArt[0]['bio_anglais'] . '</p>';
+                echo '<iframe class="video_artiste" src="' . $tableauArt[0]['url_video_artiste'] . '"></iframe>';
         }
 
         ?>
