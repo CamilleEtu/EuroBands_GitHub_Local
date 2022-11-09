@@ -1,3 +1,4 @@
+/* div globale */
 .container_artiste {
   display: flex;
   justify-content: center;
@@ -7,6 +8,7 @@
   padding: 100px 0 0 0;
 }
 
+/* différents éléments de la page artiste */
 .description_artiste {
   margin: 5em;
 }
@@ -30,6 +32,7 @@
   margin-bottom: 5em;
 }
 
+/* responsive page artiste */
 @media (max-width: 921px) {
   .description_artiste {
     margin: 2em;

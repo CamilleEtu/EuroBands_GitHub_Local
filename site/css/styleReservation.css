@@ -1,9 +1,11 @@
+/* div globale */
 .container_reserv {
   display: flex;
   flex-direction: column;
   padding: 7em 10em 2em 10em;
 }
 
+/* div qui contiennent le formulaire et l'affichage du prix */
 .container_reserv > div {
   display: flex;
   align-items: start;
@@ -33,6 +35,7 @@
   font-size: 25px;
 }
 
+/* div qui contient l'affichage du prix */
 .resume {
   display: flex;
   flex-direction: column;
@@ -116,6 +119,7 @@ input[type="checkbox"] {
   transition: 0.75s;
 }
 
+/* responsive page resa */
 @media (max-width: 1150px) {
   .container_reserv > div {
       display: flex;

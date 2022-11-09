@@ -21,6 +21,7 @@ p {
     padding:0px 150px 20px 150px;
 }
 
+/* responsive page mentions légales */
 @media (max-width: 1250px){
     p {
         padding: 0px 100px 20px 100px;
