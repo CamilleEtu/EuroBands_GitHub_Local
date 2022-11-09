@@ -26,7 +26,7 @@
             <div>
                 <?php
 
-                //var_dump($_POST);
+                // appelle le fichier config où sont stockées les informations de connexion à la base de données
                 include_once 'configuration.php';
 
                 $bdd = new PDO('mysql:host='.$hote.';port='.$port.';dbname='.$nombase,$utilisateur,$mdp);
