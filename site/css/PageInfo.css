@@ -135,3 +135,13 @@
         height: 480px;
     }
 }
+
+@media (max-width: 735px) {
+    .bloc_carte {
+        justify-content: center;
+    }
+
+    .carte, .materiel_hologramme, .chemin_personne, .video_1 {
+        height: 40vh;
+    }
+}

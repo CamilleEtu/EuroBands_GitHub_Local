@@ -2,14 +2,7 @@
 <html lang="fr">
 
 <head>
-    <meta type="descritpion" content="Page d'accueil du site du festival Européen de musique, EuroBands">
-    <meta charset="utf-8">
-    <meta type="keywords" content="eurobands, festival, music, international">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/PageInfo.css" />
-    <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
-
     <title>Official EuroBands | En savoir plus</title>
 </head>
 
@@ -68,7 +61,7 @@
         <div class="container_info">
         <h2 class="titre_accueil"> <?php echo info_titre3; ?> </h1>
                 <div class="video_1">
-                    <iframe src="https://www.youtube.com/embed/71vdr1vUy08" title="Principe de fonctionnement des hologrammes." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/r27wrQOgawo" title="Fonctionnement hologramme Fantôme de Pepper" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
         </div>
     </div>

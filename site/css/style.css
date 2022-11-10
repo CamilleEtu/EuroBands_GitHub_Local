@@ -12,21 +12,37 @@ html{
   overflow-x: hidden;
 }
 
-/*-----------HEADER---------------*/
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  background: black;
+  z-index: -1;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*----------- HEADER ---------------*/
 .container_header {
   background-color: #1e1e1e;
   display: flex;
   align-items: center;
   height: 80px;
   opacity: 90%;
-/*  transition: 0.4s;*/
   position: fixed;
   width: 100%;
   z-index: 99;
+  transition: 0,4s;
 }
 
-.container_header a,
-li {
+.container_header a, li {
   text-decoration: none;
   list-style: none;
   padding: 8px;
@@ -39,11 +55,27 @@ li {
   justify-content: center;
   align-items: center;
 }
+
 .container_header .navbar > ul > li {
   display: flex;
   justify-content: stretch;
 }
 
+/* logo header */
+.logo1 {
+  width: 175px;
+  height: auto;
+  margin: 15px;
+  padding-left: 60px;
+  transition: 0.4s;
+}
+
+.logo1:hover {
+  opacity: 75%;
+  transition: 0.5s;
+}
+
+/* bouton reservation */
 .resa {
   color: #f4f4f4;
   background-color: #003194;
@@ -58,6 +90,19 @@ li {
 }
 .resa:not(:hover) {
   transition: 0.75s;
+}
+ /* boutons langue FR et EN */
+.lgFR {
+  padding-right: 70px;
+}
+
+.lgEN:hover, .lgFR:hover {
+  color: #FDB7B9;
+  transition: 0.5s;
+}
+
+.lgEN:not(:hover), .lgFR:not(:hover) {
+  transition: 0.5s;
 }
 
 /* effet soulignement */
@@ -75,50 +120,10 @@ li {
   transition: width 0.3s;
 }
 /* fin soulignement */
-
-.logo1 {
-  width: 175px;
-  height: auto;
-  margin: 15px;
-  padding-left: 60px;
-  transition: 0.4s;
-}
-.logo1:hover {
-  opacity: 75%;
-  transition: 0.5s;
-}
-
-.lgFR {
-  padding-right: 70px;
-}
-
-.lgEN:hover, .lgFR:hover {
-  color: #FDB7B9;
-  transition: 0.5s;
-}
-
-.lgEN:not(:hover), .lgFR:not(:hover) {
-  transition: 0.5s;
-}
-
-header input{
-  display: none;
-}
   
 /*burger menu*/
-
-#overlay{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-  background: black;
-  z-index: -1;
+header input{
+  display: none;
 }
 
 #hamburger-input{
@@ -134,11 +139,9 @@ header input{
   width: 200px;
   height: 100%;
   background-color: #f4f4f4;
-  /*transition: 0.3s;*/
   padding: 0px 10px;
   box-sizing: border-box;
 }
-
 
 @media (min-width: 736px){
   #sidebar-menu{
@@ -152,49 +155,46 @@ header input{
 
 /*gestion du responsive*/
 @media (max-width: 735px) {
-      .logo1{
-        width: 100px;
-        height: auto;
-        margin: 8px;
-        padding-left: 10px;
-        transition: 0.4s;
-      }
+  .logo1{
+    width: 100px;
+    height: auto;
+    margin: 8px;
+    padding-left: 10px;
+    transition: 0.4s;
+  }
 
-      .container_header > a {
-        font-size: smaller;
-      }
+  .container_header > a {
+    font-size: smaller;
+  }
 
-      .container_header .navbar > ul > li, .container_header .navbar > ul, .lgEN, .lgFR, .resa{
-        display: none;
-      }
+  .container_header .navbar > ul > li, .container_header .navbar > ul, .lgEN, .lgFR, .resa{
+    display: none;
+  }
 
-      /*CSS concernant le burger menu*/
+    /*CSS concernant le burger menu*/
+    .header input{
+      display: block;
+    }
 
-      .header input{
-        display: block;
-      }
+    label .menu {
+      width: 45px;
+      height: 50px;
+      cursor: pointer; 
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    label #hamburger {
+      position: absolute;
+      top: 36px;
+      width: 30px;
+      height: 2px;
+      background: #f4f4f4;
+      -webkit-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+    }
 
-      label .menu {
-        width: 45px;
-        height: 50px;
-        /*-webkit-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;*/
-        cursor: pointer; 
-        display: inline-block;
-        vertical-align: middle;
-      }
-      
-      label #hamburger {
-        position: absolute;
-        top: 36px;
-        width: 30px;
-        height: 2px;
-        background: #f4f4f4;
-        -webkit-transition: 0.5s ease-in-out;
-        transition: 0.5s ease-in-out;
-      }
-
-      label #hamburger:after, label #hamburger:before {
+    label #hamburger:after, label #hamburger:before {
       -webkit-transition: 0.5s ease-in-out;
       transition: 0.5s ease-in-out;
       content: "";
@@ -205,7 +205,7 @@ header input{
       background: white;
     }
 
-    .container_header a, li{
+    .container_header a, .container_header li{
       color: black;
     }
 
@@ -218,7 +218,7 @@ header input{
       background-color: #69D2e7;
     }
 
-      label #hamburger:before { top: -10px; }
+    label #hamburger:before { top: -10px; }
 
     label #hamburger:after { bottom: -10px; }
 
@@ -280,12 +280,16 @@ header input{
     }
     .resa:not(:hover) {
       transition: 0s;
-    }
-    
-      
+    }      
 }
 
-/*------------FOOTER--------------*/
+/*------------ FOOTER --------------*/
+.container_footer {
+  background-color: black;
+  padding-bottom: 30px;
+}
+
+/* logo footer */
 .logo2 {
   width: 45px;
   height: auto;
@@ -296,14 +300,10 @@ header input{
   transition: 0.5s;
 }
 
+/* titre des rubriques */
 h3 {
   border-bottom: solid 2px #f4f4f4;
   margin-bottom: 20px;
-}
-
-.container_footer {
-  background-color: black;
-  padding-bottom: 30px;
 }
 
 /* RESEAUX */
@@ -404,8 +404,7 @@ h3 {
   }
 }
 
-/*-----------CONTENU--------------*/
-
+/*----------- CONTENU DES PAGES --------------*/
 .titre_accueil {
   display: flex;
   justify-content: center;
@@ -413,28 +412,28 @@ h3 {
   text-transform: uppercase;
   font-size: 55px;
   font-family: "Bebas Neue", cursive;
+  text-align: center;
 }
 
+/* phrase en gras sur page d'accueil */
+h6 {
+  font-size: x-large;
+  margin-bottom: 3em;
+}
+
+/* texte page accueil */
 .container_p1{
   background-image: url("../img/designTexteOpacity.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: 100vw;
-}
-
-.container_p2 > ul {
-  background-image: url("../img/designTexte.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: 100vw;
-}
-
-#overlay {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-left: 4em;
+  padding-right: 4em;
+  justify-content: center;
 }
 
 .container_p1 > div {
@@ -454,11 +453,6 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-h6 {
-  font-size: x-large;
-  margin-bottom: 3em;
 }
 
 .container_p1 > div > div > p {
@@ -486,6 +480,15 @@ h6 {
   transition: 0.3s;
 }
 
+/* affichage artistes page accueil */
+.container_p2 > ul {
+  background-image: url("../img/designTexte.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100vw;
+}
+
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -510,41 +513,12 @@ h6 {
   font-weight: bold;
 }
 
-.container_p1 {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  padding-left: 4em;
-  padding-right: 4em;
-  justify-content: center;
-}
-
 .description_nb_artistes {
   text-align: center;
   padding: 1em;
 }
 
-#af {
-  width: 100%;
-  height: auto;
-}
-.container_p1 > div {
-  display: flex;
-}
-
-.carrousel {
-  display: flex;
-  justify-content: center;
-}
-
-
-.image {
-  display: flex;
-  width: 100vw;
-  align-items: center;
-  justify-content: center;
-}
-
+/* carrousel */
 .swiper {
   width: 100vw;
   height: 95vh;
@@ -577,11 +551,34 @@ h6 {
   object-fit: cover;
 }
 
+/* page erreur 404 */
+.erreur404 {
+  display: flex;
+  flex-direction: column;
+}
 
+.erreur {
+  padding-top: 7em;
+  padding-bottom: 3em;
+  text-align: center;
+}
+
+.erreur > p {
+  padding-bottom: 2em;
+}
+
+.erreur > p > a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}
+
+/* responsive */
 @media (max-width: 921px) {
     .container_p1 {
-        padding: 0px;
-        text-align: center;
+      padding: 0px;
+      text-align: center;
     }
 
     .RS {

@@ -2,10 +2,13 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta type="descritpion" content="Page d'accueil du site du festival Européen de musique, EuroBands">
+    <meta type="keywords" content="eurobands, festival, music, international">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
 
 </head>
 

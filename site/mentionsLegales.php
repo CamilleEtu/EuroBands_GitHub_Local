@@ -7,13 +7,7 @@
 
 <head>
     <meta type="descritpion" content="Page citant les mentions légales, dont l'identité de l'organisateur, le siège, les coordonnées, les mentions relatives à la propriété intellectuelle ainsi que les mentions relatives à l'hébergement du site.">
-    <meta charset="utf-8">
-    <meta type="keywords" content="eurobands, festival, music, international, mentions légales, droit d'images">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/styleMentions.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <link rel="icon" type="image/x-icon" href="./img/Favicon.ico">
 
     <title>Official EuroBands | <?php echo mL_titre; ?></title>
 </head>

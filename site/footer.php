@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta type="descritpion" content="Footer du site du festival Européen de musique, EuroBands">
-        <meta charset="utf-8">
-        <meta type="keywords" content="eurobands, festival, music, international">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" src="css/style.css">
         <title>Footer</title>
     </head>
