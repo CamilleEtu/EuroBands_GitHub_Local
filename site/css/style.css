@@ -39,7 +39,7 @@ html{
   position: fixed;
   width: 100%;
   z-index: 99;
-  transition: 0,4s;
+  transition: 0.4s;
 }
 
 .container_header a, li {
@@ -377,6 +377,21 @@ h3 {
   width: 100%;
   justify-content: space-around;
 } 
+
+.footer_nav > ul > li > a{
+  text-decoration: none;
+  color: white;
+}
+
+.footer_nav > ul > li > a:hover{
+  transition: .4s;
+  text-decoration: none;
+  color: #69D2e7;
+}
+
+.footer_nav > ul > li > a:not(:hover){
+  transition: .4s;
+}
 
 /* effet soulignement */
  .container_footer > nav > ul > li > ul > a > li::after {

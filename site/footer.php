@@ -35,7 +35,7 @@
                     <li><h3><?php echo footer_coord; ?></h3>
                         <p>&emsp;Place du Breuil</p>
                         <p>&emsp;43 000 Le Puy En Velay</p>
-                        <p>&emsp;eurobands@mail.com</p>
+                        &emsp;<a href="mailto:eurobands@mail.com">eurobands@mail.com</a>
                         <p>&emsp;01 02 03 04 05</p>
                     </li>
                 </ul>
