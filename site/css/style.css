@@ -478,21 +478,32 @@ h6 {
   font-size: 20px;
 }
 
-.container_p1 > div > div > a {
+.bouton_voirPlus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  background-color: #f4f4f4;
-  padding: 10px;
-  border-radius: 10px;
-  color: inherit;
+  height: 45px;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 15px;
+  letter-spacing: 2px;
+  color: #1e1e1e;
+  border: 2px #1e1e1e solid;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
 }
 
-.container_p1 > div > div > a:hover {
-  background-color: #d3d3d3;
-  transition: 0.3s;
+.bouton_voirPlus:hover {
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+  border-radius: 25px;
+  transition: 0.75s;
 }
-
-.container_p1 > div > div > a:not(hover) {
-  transition: 0.3s;
+.bouton_voirPlus:not(:hover) {
+  transition: 0.75s;
 }
 
 /* affichage artistes page accueil */
@@ -502,6 +513,7 @@ h6 {
   background-attachment: fixed;
   background-position: center;
   background-size: 100vw;
+  padding-bottom: 6em;
 }
 
 .image-gallery {
@@ -526,6 +538,9 @@ h6 {
   color: rgb(42, 42, 42);
   font-size: 17px;
   font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .description_nb_artistes {

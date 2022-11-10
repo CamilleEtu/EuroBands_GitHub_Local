@@ -39,10 +39,9 @@ $nbArt = count($tableauArt);
         <div class="container_p1">
             <div>
                 <div>
-                    <!-- <img class="img_deco1" src="./img/designTexte.png"> -->
                     <p> <?php echo index_p1; ?> </p>
                     <h6> <?php echo index_p2; ?> </h6>
-                    <?php echo '<a href="./page_information.php?lang='.$_GET["lang"].'">'.index_more; ?></a>
+                    <?php echo '<a class="bouton_voirPlus" href="./page_information.php?lang='.$_GET["lang"].'">'.index_more; ?></a>
                 </div>
             </div>
         </div>
