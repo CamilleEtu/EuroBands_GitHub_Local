@@ -53,11 +53,52 @@ function afficheCheck(){
 
 }
 
+
+function afficheBar(){
+    if (document.getElementById("hamburger-input").checked) {
+            document.getElementById("sidebar-menu").style.visibility = "visible";
+            document.getElementById("sidebar-menu").style.right = 0;
+            document.getElementById("sidebar-menu").style.transition = "0.3s";
+            document.getElementById("overlay").style.visibility = "visible";
+            document.getElementById("overlay").style.opacity = 0.4;
+        }
+    else{
+        document.getElementById("sidebar-menu").style.visibility = "hidden";
+        document.getElementById("sidebar-menu").style.removeProperty("transition");
+        document.getElementById("sidebar-menu").style.transition = "0.3s";
+        document.getElementById("sidebar-menu").style.removeProperty("right");
+        document.getElementById("overlay").style.visibility = "hidden";
+        document.getElementById("overlay").style.opacity = 0;
+    }
+}
+
+
+function scrollFunction() {
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+        document.getElementById("hamburger").style.top = "29px";
+        document.getElementById("header").style.height = "65px";
+        document.getElementById("header").style.opacity = "100%";
+    } else {
+        document.getElementById("hamburger").style.top = "36px";
+        document.getElementById("header").style.height = "80px";
+        document.getElementById("header").style.opacity ="90%";
+    }
+
+}
+
 function setupListeners(){
     if(document.getElementsByClassName("checkDate").length != 0){
         afficheCheck();
     }
+    if (document.getElementById("hamburger-input")) {
+        document.getElementById("hamburger-input").addEventListener("click", afficheBar);
+    }
+    window.addEventListener("scroll", scrollFunction);
+    if (document.getElementById("myHeader")) {
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+    }
 }
 
 window.addEventListener("load", setupListeners);
-
+setupListeners();

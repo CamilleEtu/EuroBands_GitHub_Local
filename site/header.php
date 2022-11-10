@@ -77,59 +77,7 @@
     <?php
     }
     ?>
-
-    <!-------JS EFFET SCROLL--------->
-    <script>
-        window.onscroll = function() {
-            scrollFunction();
-        };
-
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
-        
-        function setupListener(){
-            if (document.getElementById("hamburger-input")) {
-                document.getElementById("hamburger-input").addEventListener("click", afficheBar);
-            }
-        }
-
-        function afficheBar(){
-            if (document.getElementById("hamburger-input").checked) {
-                    document.getElementById("sidebar-menu").style.visibility = "visible";
-                    document.getElementById("sidebar-menu").style.right = 0;
-                    document.getElementById("sidebar-menu").style.transition = "0.3s";
-                    document.getElementById("sidebar-menu").style.setProperty("-webkit-transition", "0.3s");
-                    document.getElementById("overlay").style.visibility = "visible";
-                    document.getElementById("overlay").style.opacity = 0.4;
-                }
-            else{
-                document.getElementById("sidebar-menu").style.visibility = "hidden";
-                document.getElementById("sidebar-menu").style.removeProperty("transition");
-                document.getElementById("sidebar-menu").style.removeProperty("-webkit-transition");
-                document.getElementById("sidebar-menu").style.transition = "0.3s";
-                document.getElementById("sidebar-menu").style.setProperty("-webkit-transition", "0.3s");
-                document.getElementById("sidebar-menu").style.removeProperty("right");
-                document.getElementById("overlay").style.visibility = "hidden";
-                document.getElementById("overlay").style.opacity = 0;
-            }
-        }
-
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-                document.getElementById("hamburger").style.top = "29px";
-                document.getElementById("header").style.height = "65px";
-                document.getElementById("header").style.opacity = "100%";
-            } else {
-                document.getElementById("hamburger").style.top = "36px";
-                document.getElementById("header").style.height = "80px";
-                document.getElementById("header").style.opacity ="90%";
-            }
-
-        }
-
-        setupListener();
-    </script>
+    <script src="javascript/functions.js"></script>
 
 
 </body>
